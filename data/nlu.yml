@@ -1,0 +1,1841 @@
+version: "2.0"
+
+nlu:
+- intent: affirm
+  examples: |
+    - yes
+    - yup
+    - yess
+    - yep
+    - yeah
+    - indeed
+    - that's right
+    - ok
+    - great
+    - right, thank you
+    - correct
+    - great choice
+    - sounds really good
+    - yup
+    - ya
+    
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - no. thanks
+    - noo
+    - nope
+    - no. not required
+    - thanks. but not required
+    - naa
+    - i don't require it over mail. thanks
+    - ok thanks
+- intent: greet
+  examples: |
+    - Bom dia
+    - Bonjour   
+    - Good Morning
+    - Good morning
+    - Good mourning
+    - Guten Morgen
+    - HELLO
+    - HEY
+    - HEllo
+    - HI
+    - HI Sara
+    - Hallo
+    - Hei
+    - Hellllooooooo
+    - Hello
+    - Hello Bot
+    - Hello Rasa
+    - Hello!
+    - Hey
+    - Hey Sara
+    - Hey bot
+    - Heya
+    - Heylo
+    - Hi
+    - Hi bot
+    - Hi man
+    - Hi rasa
+    - Hi sara
+    - Hi sara..
+    - Hi there
+    - Hi!
+    - Hi'
+    - Hi,
+    - Hi, bot
+    - Hieee
+    - Hieeeeeeeeeeeee
+    - Hola
+    - I said, helllllloooooO!!!!
+    - Well hello there ;)
+    - What is up?
+    - Whats up
+    - Whats up my bot
+    - Whats up?
+    - ayyyy whaddup
+    - bonjour
+    - ey boss
+    - good evening
+    - good moring
+    - good morning
+    - greet
+    - greetings
+    - hai
+    - hallo
+    - halloo
+    - halloooo
+    - halo
+    - halo sara
+    - heeey
+    - heelio
+    - hell9o
+    - hellio
+    - hello
+    - hello everybody
+    - hello friend
+    - hello hi
+    - hello is anybody there
+    - hello it is me again
+    - hello robot
+    - hello sweatheart
+    - hello sweet boy
+    - hello there
+    - hello world
+    - hello?
+    - hello]
+    - hellooo
+    - helloooo
+    - helo
+    - hey
+    - hey bot
+    - hey bot!
+    - hey dude
+    - hey hey
+    - hey let's talk
+    - hey rasa
+    - hey ther
+    - hey there
+    - hey there boy
+    - hey there..
+    - hey, let's talk
+    - hey, sara!
+    - heya
+    - heyho
+    - heyo
+    - hhola
+    - hi
+    - hi !
+    - hi Mister
+    - hi again
+    - hi can you speak ?
+    - hi folks
+    - hi friend
+    - hi friends
+    - hi hi
+    - hi mrs rasa
+    - hi pal!
+    - hi there
+    - hi there it's me
+    - hi!
+    - hi.........................................................
+    - hi?
+    - hieee
+    - hii
+    - hiihihi
+    - hiii
+    - hlo
+    - hola
+    - howdy
+    - jojojo
+    - jop
+    - konichiwa
+    - merhaba
+    - ola 
+    - rasa hello
+    - salut
+    - sup
+    - wasssup
+    - wasssup!
+    - what up
+    - whats popping
+    - whats up
+    - yo
+    - yoo
+    - ssup?
+    - helleo
+- intent: thank
+  examples: |
+    - Cool. Thanks
+    - Great, thanks
+    - Thank you
+    - Thank you Sara
+    - Thank you so much
+    - Thank's!
+    - Thanks
+    - Thanks bot
+    - Thanks for that
+    - Thanks!
+    - amazing, thanks
+    - cheers
+    - cheers bro
+    - cool thank you
+    - cool thanks
+    - cool, thanks
+    - danke
+    - great thanks
+    - ok thanks
+    - ok thanks sara
+    - ok thanks!
+    - perfect thank you
+    - thank u
+    - thank you
+    - thank you anyways
+    - thanks
+    - thanks a bunch for everything
+    - thanks a lot
+    - thanks for forum link, I'll check it out
+    - thanks for the help
+    - thanks this is great news
+    - thanks you
+    - thanks!
+    - thankyou
+    - thnks
+    - thx
+    - yes thanks
+    - thanks for your information
+    - thanks for helping me
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - thanks
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - have a good day
+    - good bye
+    - end
+    - stop
+    - exit
+    - cia
+
+- intent: wierd
+  examples: |
+    - fdfss
+    - wee
+    - wqwqw
+    - feedback
+    - igikhgkihj
+    - gotcha
+    - eeeee
+    - kbkbkbk
+    - jhjhvjhv
+    - hell
+    - ggg
+    - ttrft
+    - .
+    - @
+    - #
+    - jhsb wd bwhjdbx asbhb
+
+- intent: faq/artificial_intelligence
+  examples: |
+    - what is artificial intelligence?
+    - what is AI?
+    - explain artificial intelligence
+    - how artificial intelligence works?
+    - how AI works?
+    - What is Artificial Intelligence exactly?
+    - What is meant by Artificial Intelligence?
+    - What is AI in simple words?
+    - What is AI with examples?
+    - could you please tell me about AI?
+    - could you please tell me about Artificial Intelligence?
+    - What exactly is Artificial Intelligence?
+    - What is Artificial Intelligence in simple words?
+    - What is artificial intelligence with example?
+    - what is the meaning of Artificial Intelligence ?
+    - what is the concept of Artificial Intelligence
+    - What is the principle of Artificial Intelligence?
+    - I wanna know about Artificial Intelligence
+    - what is the simple definition of Artificial Intelligence?
+    - Artificial Intelligence meaning
+    - simple definition of Artificial Intelligence
+    - What is Artificial Intelligence in simple terms?
+    - Artificial Intelligence in layman terms
+    - how to explain Artificial Intelligence to a kid?
+    - how to explain Artificial Intelligence to a child?
+    - how to explain Artificial Intelligence to children?
+    - Where is AI used?
+    - How AI will help humans?
+    - How AI affect our life?
+    - What are the main goals of AI?
+- intent: faq/rl
+  examples: |
+    - what is reinforcement learning?
+    - explain reinforcement learning
+    - how can you define reinforcement learning?
+    - how reinforcement learning works? 
+    - definition of reinforcement learning
+    - define reinforcement learning
+    - definition of reinforcement learning
+    - what do you mean by reinforcement learning?
+    - what is reinforcement learning exactly?
+    - what is meant by reinforcement learning?
+    - what is reinforcement learning in simple words?
+    - how can you explain reinforcement learning to a school going kid?
+    - could you please tell me about  reinforcement learning?
+    - What exactly is reinforcement learning?
+    - What is reinforcement learning in simple words?
+    - What is reinforcement learning with example?
+    - what is the meaning of reinforcement learning?
+    - what is the concept of reinforcement learning
+    - What is the principle of reinforcement learning?
+    - I wanna know about reinforcement learning
+    - what is the simple definition of reinforcement learning?
+    - reinforcement learning meaning
+    - simple definition of reinforcement learning
+    - What is reinforcement learning in simple terms?
+    - reinforcement learning in layman terms
+    - how to explain reinforcement learning to a kid?
+    - how to explain reinforcement learning to a child?
+    - how to explain reinforcement learning to children?
+    - How reinforcement learning will help humans?
+    - How reinforcement learning affect our life?
+    - What are the main goals of reinforcement learning?
+
+- intent: faq/nlp
+  examples: |
+    - what is natural language processing?
+    - what is NLP?
+    - explain natural language processing
+    - explain nlp
+    - how natural language processing works?
+    - how NLP works?
+    - What do you mean by natural language processing?
+    - What is natural language processing exactly?
+    - What is meant by natural language processing?
+    - What is natural language processing in simple words?
+    - what is nlp in simple words
+    - What is natural language processing with examples?
+    - could you please tell me about natural language processing?
+    - could you please tell me about nlp?
+    - What exactly is natural language processing?
+    - What is natural language processing with example?
+    - what is the meaning of natural language processing ?
+    - what is the concept of natural language processing
+    - What is the principle of natural language processing?
+    - I wanna know about Artificial Intelligence
+    - what is the simple definition of natural language processing?
+    - natural language processing meaning
+    - simple definition of natural language processing
+    - What is natural language processing in simple terms?
+    - natural language processing in layman terms
+    - Where is NLP used?
+    - what is natural language processing in ai
+    - natural language processing in artificial intelligence
+
+- intent: faq/rl
+  examples: |
+    - what is reinforcement learning?
+    - What is reinforcement learning theory?
+    - explain reinforcement learning
+    - how reinforcement learning works?
+    - What is reinforcement learning example?
+    - What is a reinforcement learning algorithm?
+    - What is reinforcement learning in machine learning?
+    - What is meant by reinforcement learning?
+    - What is reinforcement learning in simple words?
+    - what is reinforcement learning in simple words
+    - What is reinforcement learning with examples?
+    - could you please tell me about reinforcement learning?
+    - What exactly is reinforcement learning?
+    - What is reinforcement learning with example?
+    - what is the meaning of reinforcement learning ?
+    - what is the concept of reinforcement learning
+    - What is the principle of reinforcement learning?
+    - I wanna know about reinforcement learning
+    - what is the simple definition of reinforcement learning?
+    - reinforcement learning meaning
+    - simple definition of reinforcement learning
+    - What is reinforcement learning in simple terms?
+    - reinforcement learning in layman terms
+    - Where is reinforcement learning used?
+    - what is reinforcement learning in ai
+    - reinforcement learning in artificial intelligence
+
+- intent: chitchat/nicetomeetyou
+  examples: |
+    - Its really nice to meet you
+    - Nice talking
+    - its a nice feeling talking to you
+    - it was nice talking to you
+    - nice to meet you
+
+- intent: chitchat/telljoke
+  examples: |
+    - could you please tell a joke
+    - tell me a joke
+    - hey tell me a joke
+    - can you tell a joke
+    - could u tell a joke
+    - joke
+    - speak a joke
+    - tell me a funny joke
+    - make me laugh
+    - can u make me laugh
+    - can u make me happe?
+    - please chill my mind
+
+
+- intent: bot_challenge
+  examples: |
+    - Ar you a bot ?
+    - Are you a bot
+    - Are you a chat bot?
+    - Are you the bot?
+    - Hi there, are you the bot?
+    - are you a BOT
+    - are you a Skynet ?
+    - are you a bot
+    - are you a bot ?
+    - are you a bot?
+    - are you a chatbot
+    - are you a rasa bot?
+    - are you a real bot?
+    - are you a robot
+    - are you ai
+    - are you artificial
+    - are you artificial intelligence
+    - are you bot
+    - are you bot?
+    - are you rasa bot?
+    - are you real
+    - are you real lol
+    - are you really a bot
+    - are you robot
+    - are you sure that you're a bot?
+    - bot?
+    - cuz you are a bot
+    - i guess you are a chatbot
+    - oh are you chatbot?
+    - tell me, are you a bot?
+    - what are you, a bot?
+    - you are a robot
+    - you are ai
+    - you are chatbot
+    - you're a bot
+    - you robo
+    - real bot then?
+    - are you really a bbot?
+
+- intent: out_of_scope
+  examples: |
+    - Can you book me a restaurant
+    - Could you please tell e where is sanfransico
+    - I need advise on my startup
+    - How to become rich ?
+    - how to start new business without risk ?
+    - what about my order?
+
+- intent: chitchat/ask_name
+  examples: |
+    - what is your name? 
+    - May I know your name?
+    - What do people call you?
+    - Do you have a name for yourself?
+    - Tell me something about yourself?
+    - could you tell me your name?
+    - please tell me your name?
+    - introduce yourself
+    - give me your introduction
+    - Please introduce yourself
+    - To whom am I talking to?
+    - What’s your name?
+    - why are you here?
+    - talk about yourself
+    - tell me some stuff about you
+    - talk some stuff about yourself
+    - I want to know you better
+    - I want to know more about you
+    - tell me about you
+    - tell me about yourself
+    - describe yourself
+    - say about you
+    - define yourself
+    - all about you
+    - what are you upto?
+    - who the hell are you?
+    - Are you male or female?
+    - who are you?
+    - what are you?
+    - why do you exist?
+    - tell me more about yourself
+
+- intent: chitchat/ask_human
+  examples: |
+    - hey are you human
+    - are u human
+    - r u a human
+    - are you real human?
+    - you are a human
+    - Rara, are you a human?
+    - you are bot or human?
+    - are you human
+    - ok, i know i confused you there being a human! :)
+    - you are human or bot
+    - Are you human?
+    - are you a human ?
+    - Are you human ?
+    - Are you a human being?
+    - sara, are you a robot or human?
+    - r u real?
+    - are you a real person
+    - are u a real person?
+    - Are you a real person?
+    - are you a real person?
+    - are you real person or chat bot?
+    - So I'm here Today to ask one very simple question, what are you ?
+    - you sound like a real human
+    - wow you sound like real human
+    - are you human ?
+- intent: chitchat/ask_good
+  examples: |
+    - you are very helpful
+    - you are the best
+    - you're a true professional
+    - you are good
+    - you work well
+    - you're awesome
+    - you're perfect
+    - you're great
+    - you're so kind
+    - you are amazing
+    - you are awesome
+    - you are coool
+    - you are really good
+    - you are really nice
+    - you are so amazing
+    - you're just super
+    - you are so awesome
+    - you are so cool
+    - you are so fine
+    - you are so good
+    - you are so helpful
+    - you are so lovely
+    - you are the best ever
+    - you are the best in the world
+    - you are the nicest person in the world
+    - you are too good
+    - you are very coool
+    - you are very kind
+    - you are very lovely
+    - you are very useful
+    - you are wonderful
+    - you made my day
+    - you rock
+    - you almost sound human
+    - I want to tell everyone how awesome you are
+    - I'd like to tell everyone that you are awesome
+    - I want to let everyone know that you are awesome
+    - let's tell everyone that you are awesome
+    - you are really amazing
+    - coool
+    - nice
+    - good
+    - perfect
+    - awesome
+    - super
+    - fantastic
+- intent: chitchat/ask_languagesbot
+  examples: |
+    - Are you familiar with more than one language?
+    - Can you communicate in any other languages?
+    - Can you speak more than one language?
+    - Do you know any other languages?
+    - Do you know other languages?
+    - Do you speak german language ?
+    - Do you speak any other languages?
+    - Do you understand spanish language?
+    - How many different languages are you fluent in?
+    - How many languages are you familiar with?
+    - How many languages can you speak?
+    - How many languages do you have knowledge of?
+    - How many languages do you know?
+    - In what languages are you fluent enough?
+    - In which languages are you fluent?
+    - In which languages can you speak?
+    - Speak any other languages?
+    - What are all of the different languages you can speak?
+    - What are the languages you can speak?
+    - What do you speak?
+    - What languages are you fluent in?
+    - What languages can you communicate in?
+    - What languages can you converse in?
+    - What languages can you use?
+    - What languages do you know how to use?
+    - What languages do you know?
+    - What languages do you speak?
+    - Which languages are you familiar with?
+    - Which languages do you speak?
+    - are you bilingual?
+    - are you multilingual?
+    - can you speak Spanish language?
+    - can you speak in italian language?
+    - do you know chinese language
+    - do you speak dutch language?
+    - do you speak german language?
+    - do you speak any other languages?
+    - how many languages are you fluent in?
+    - how many languages do you know?
+    - tell me some languages you know?
+    - what else do you know besides  English language?
+    - what foreign languages are you fluent in?
+    - what foreign languages do you know?
+    - what language do you use
+    - what languages are you comfortable speaking at?
+    - what languages are you familiar with?
+    - what languages are you good at speaking?
+    - what languages do you know?
+    - what languages do you speak
+    - what languages you are well versed ?
+    - what languages you can be comfortable speaking?
+    - what languages you can handle well?
+    - what languages you can speak ?
+    - what languages you know?
+    - what languages you prefer more speaking at?
+    - which languages do you understand?
+    - you know French language
+    - you speak french language ?
+    - I want to speak binary with you
+    - ARE YOU SPANISH language
+
+- intent: chitchat/ask_about
+  examples: |
+    - how's you?
+    - how are you buddy?
+    - how are you man?
+    - Ahoy matey how are you?
+    - Are you ok?
+    - Do you feel good?
+    - Do you have a great day?
+    - HI Moltron, what are you up to?
+    - Hi Moltron! How are you?
+    - How are You?
+    - How are things?
+    - How are you
+    - How are you men?
+    - How are you today?
+    - How are you?
+    - How was your day?
+    - How you doing?
+    - How's it going
+    - How's it hanging?
+    - How's life treating you friend?
+    - How've you been?
+    - Hows it going
+    - I'm fine and you
+    - Is everything ok?
+    - What's going on?
+    - What's new?
+    - What's up
+    - What's up man
+    - and you
+    - are you alright
+    - are you happy
+    - are you having a good day
+    - are you ok
+    - are you okay
+    - h r u ?
+    - hello, how are you?
+    - hey how are you?
+    - hi how are you?
+    - hi how u doing
+    - hi moltron, how are you?
+    - how ?
+    - how are things going
+    - how are things with you?
+    - how are u
+    - how are u?
+    - how are xou
+    - how are you
+    - how are you ?
+    - how are you doing
+    - how are you doing this morning
+    - how are you doing today my sweet friend
+    - how are you doing today?
+    - how are you doing?
+    - how are you feeling
+    - how are you today
+    - how are you'
+    - how are you?
+    - how are you????
+    - how are yuo
+    - how do you do?
+    - how have you been
+    - how is it going
+    - how is your day
+    - how is your day going
+    - how is your evening
+    - how r u
+    - how r u ?
+    - how r u>
+    - how you doing
+    - how you doing?
+    - how's it going?
+    - how's life
+    - how's life been treating you?
+    - how's your day going
+    - howareyou
+    - hw r u?
+    - is everything all right
+    - is everything okay
+    - nah, I'm good - how are you doing?
+    - okay hi how are you?
+    - wassup>
+    - what about your day
+    - what are you up to?
+    - what's good
+    - what's up
+    - what's up sara
+    - what's up?
+    - whatchcha doing
+    - whatchya upto ?
+    - whats goin on
+    - whats new
+    - whatsapp
+    - yow are you
+    - how are you Rasa
+    - Hey moltron, how's it going
+    - are you cool
+- intent: chitchat/ask_doing
+  examples: |
+    - how are you doing?
+    - how you doing?
+    - what are you doing now?
+    - hey what's up
+    - what's up today
+- intent: chitchat/ask_howhelp
+  examples: |
+    - how can you help me?
+    - i need some details
+    - what can you do for me?
+    - In what way you can help me?
+    - can you assist me here?
+    - I am new here! could you please help me?
+    - what can you do?
+    - I have a question can you help me?
+- intent: chitchat/ask_human_transfer
+  examples: |
+    - I want to speak to a human
+    - I want to chat to a human
+    - I want to speak to a real person
+    - Could you please ask human to speak
+    - I want to communicate with customer service
+    - I want to speak to a live agent
+- intent: chitchat/ask_howbuilt
+  examples: |
+    - By what means were you made?
+    - By what method were you fashioned?
+    - Can you explain how you were created?
+    - Can you give me an idea as to how you were created?
+    - Can you say how you were constructed?
+    - Do you know how you were built?
+    - Do you know how you were made?
+    - How did they build you?
+    - How did they create you?
+    - How did they make you?
+    - How did you come into being?
+    - How did you come to be?
+    - How exactly were you devised?
+    - How exactly were you made?
+    - How were you built?
+    - How were you conceived?
+    - How were you constructed?
+    - How were you devised?
+    - How were you formed?
+    - How were you made into who you are?
+    - How were you made?
+    - How were you materialized?
+    - How were you set up?
+    - I want to know how you were formed
+    - I'd like to know how you were created
+    - I'd like to know how you were put together?
+    - In what manner were you built?
+    - In what manner were you constructed?
+    - In what manner were you formed?
+    - In what way were you created?
+    - In what way were you formed?
+    - In what way were you made?
+    - In what way were you shaped?
+    - In which manner were you devised?
+    - Let me know how you were made exactly
+    - Specify how you were created?
+    - Tell me how you were made?
+    - What process was used to build you?
+    - What process was used to create you?
+    - What was the process for making you?
+    - You originated through what means?
+    - how have you been built?
+    - how were you made?
+    - in what way were you made?
+    - so how were you made?
+    - what are you made of
+    - Are you built using rasa?
+    - Are u developed in rasa
+    - are you build with rasa ?
+
+- intent: chitchat/ask_howold
+  examples: |
+    - Do you have friends the same age as you, if so, how old are they?
+    - How long have you been alive?
+    - How long have you been around?
+    - How long have you occupied the earth?
+    - How many candles were on your last birthday cake?
+    - How many years have you been alive?
+    - How many years have you lived?
+    - How old are you?
+    - How old were you on your last birthday?
+    - How old will you be on your next birthday?
+    - Tell me your day, month and year of birth.
+    - What is your age?
+    - What is your birthdate?
+    - What is your count of years being alive so far?
+    - What was your age on your last birthday?
+    - What will be your age on your next birthday?
+    - What year were you born?
+    - Whats your age?
+    - When do you celebrate your day of birth?
+    - and you are how many years old?
+    - can you tell me exactly how old you are?
+    - can you tell me what number represents your age?
+    - can you tell me your age?
+    - do you know how old you are?
+    - give me your age?
+    - how about your age
+    - how aold are you
+    - how many ages?
+    - how many years old are you?
+    - how old are u
+    - how old are you
+    - how old are you?
+    - how old were you on your last birthday?
+    - how old were you when you celebrated your last birthday?
+    - how old will you be this year?
+    - how old?
+    - in what year were you born?
+    - tell me how old you are?
+    - tell me your age number?
+    - tell me your age?
+    - what age are you
+    - what age were you when you celebrated your last birthday?
+    - what is your age?
+    - what is your birthday?
+    - what is your exact age?
+    - what number represents your age?
+    - what year were you born?
+    - what's your age?
+    - whats your age?
+    - whats your birth year?
+    - when is your birthday?
+    - when were you born?
+    - when you were bon
+    - What's your age?
+
+- intent: chitchat/ask_time
+  examples: |
+    - Can you give me the time?
+    - Can you tell me the time?
+    - Can you tell me what time it is?
+    - Can you tell the time?
+    - Could you tell me the time, please?
+    - Could you tell me the time?
+    - Could you tell me what time is it?
+    - Do you have the time?
+    - Do you know the time?
+    - Do you know what time it is?
+    - Excuse me, what time is it?
+    - Give me the time.
+    - Hi, I need the time.
+    - I need to know what time it is.
+    - Pardon me, but do you know the time?
+    - Tell me the time.
+    - Time, please!
+    - Time?
+    - What is the current time?
+    - What is the exact time?
+    - What is the hour and minute right now?
+    - What is the time?
+    - What might the time be?
+    - What time do we have?
+    - What time have we got?
+    - What time is it in [Berlin](location)?
+    - What time is it right now?
+    - What's the current time?
+    - What's the time right now?
+    - What's the time?
+    - Would you tell me what time it is?
+    - do you have the time?
+    - do you know the current time?
+    - tell me the current time.
+    - tell me the time it is.
+    - tell me the time.
+    - tell me what time you have.
+    - that's true. do you know what time it is?
+    - what is the current time?
+    - what is the time ?
+    - what is the time in [Sydney](location)?
+    - what is the time?
+    - what is time in US ?
+    - what is time is US ?
+    - what is time is USA ?
+    - what time do you have?
+    - what time is it
+    - what time is it?
+    - what time it is
+    - what's the time
+    - whats the time now
+- intent: chitchat/ask_weather
+  examples: |
+    - Are there any meteorological changes that I need to be aware of?
+    - Are we in for a scorcher?
+    - Beautiful day, isn't it?
+    - Can I ask you something about weather
+    - Can we expect any thunderstorms?
+    - Do you have good weather?
+    - How is the weather today?
+    - How is the weather?
+    - How is weather today
+    - Is it hot or cold?
+    - Is it humid out there today?
+    - Is it quite breezy outside?
+    - Is it raining
+    - Is it raining?
+    - Looks like a beautiful day hey?
+    - Nice day out today?
+    - Weather?
+    - What is the temperature today?
+    - What is the weather at your place?
+    - What is the weather for tomorrow?
+    - What is the weather in newyork?
+    - What's it like out there?
+    - What's the weather forecast?
+    - What's the weather like over there?
+    - What's the weather like where I am right now?
+    - What's the weather like?
+    - Will I require my raincoat today?
+    - Will the skies be clear today?
+    - Will we build a snowman today?
+    - excellent - is it hot in [Berlin](location)?
+    - how is the weather
+    - how is the weather ?
+    - how is the weather in [berlin](location)?
+    - how is the weather?
+    - how's the weather ?
+    - how's the weather in [berlin](location)
+    - how's the weather?
+    - how's weather
+    - hows the waether
+    - hows the weather in bot world
+    - hows the weather today in [berlin](location)?
+    - is it hot ?
+    - is it hot outside ?
+    - is it sunny
+    - is the sun out where you are?
+    - is the sun out where zou are?
+    - it is cold
+    - temperature?
+    - the weather today
+    - weatger
+    - weather
+    - weather?
+    - well, if you wish: what about the weather
+    - what about the weather in [Lüneburg](location)
+    - what is the temperature
+    - what is the wather
+    - what is the weatehr
+    - what is the weather
+    - what is the weather in [Berlin](location)
+    - what is the weather in [zurich](location)?
+    - what is the weather like where you are?
+    - what is the weather like?
+    - what is the whether today
+    - what the wheather like?
+    - what"s the weather
+    - what's the weather
+    - what's the weather like
+    - what's the weather like in [LA](location)
+    - what's the weather like where you are?
+    - what's the weather like?
+    - what's the weather today
+    - what's the weather today?
+    - whats the temperature
+    - whats the temperature in [delhi](location)?
+    - whats the weather in [berlin](location)?
+    - whats the weather like tomorrow?
+    - wheather at you location?
+    - wheather be like at your place?
+
+- intent: chitchat/ask_wherefrom
+  examples: |
+    - Are you from around here?
+    - Around where are you from?
+    - Do you know where you come from?
+    - From where did you come?
+    - So where are you from
+    - What area are you from?
+    - What citizenship do you lay claim to?
+    - What city are you in?
+    - What city do you claim to for your birth?
+    - What city were you born in?
+    - What country are you from?
+    - What country were you born in?
+    - What is your birthplace?
+    - What is your heritage?
+    - What is your origin?
+    - What is your original location?
+    - What is your root?
+    - What location are you from?
+    - What state were you born in?
+    - What's the name of the place you came from?
+    - Where are you located?
+    - Where are you?
+    - Where are your origins?
+    - Where are your roots?
+    - Where did you come from?
+    - Where did you grow up?
+    - Where did you originate?
+    - Where do you come from?
+    - Where do you consider home?
+    - Where do you live?
+    - Where from?
+    - Where might you be from?
+    - Where were you at before you were here?
+    - Where were you born?
+    - You live around here?
+    - You were conceived in what location?
+    - are you from around here?
+    - what country are you from?
+    - where are from
+    - where are you from
+    - where are you from?
+    - where are your parents from?
+    - where did you come from?
+    - where did you grow up?
+    - where did you spend your youth?
+    - where do you come from?
+    - where do you live
+    - where do you live?
+    - where's your home town?
+
+- intent: faq/bias
+  examples: |
+    - what is bias in machine learning
+    - What is bias in machine learning example?
+    - What does bias mean?
+    - What is a bias term?
+    - How do you calculate bias in machine learning?
+    - bias term in machine learning
+    - types of bias in machine learning
+    - could you please explain about bias
+    - could you please explain about bias in machine learning
+    - could you please explain about bias in ml
+    - What is bias in bias variance tradeoff?
+
+- intent: faq/variance
+  examples: |
+    - What is variance in ML?
+    - what is variance in machine learning
+    - Why is variance important in machine learning? 
+    - variance
+    - What is model variance?
+    - Is high variance Overfitting?
+    - How do we calculate variance?
+    - variance formula in machine learning
+    - could you please explain about variance
+    - could you please explain variance in machine learning
+    - could you please explain about variance in ml
+    - What is variance in bias variance tradeoff?
+
+- intent: faq/bias_variance_tradeoff
+  examples: |
+    - What's the trade-off between bias and variance?
+    - Why is there a bias variance tradeoff?
+    - How do you achieve bias variance trade off?
+    - What is the bias variance tradeoff explain with an example?
+    - bias variance trade off
+    - How do you deal with variance and bias?
+    - could you please tell me about bias variance trade off?
+    - What exactly is bias variance trade off?
+    - explain bais variance trafe off
+    - what is bias and variance in machine learning?
+
+- intent: faq/overfitting
+  examples: |
+    - what is overfitting?
+    - What is Overfitting in machine learning?
+    - What is meant by Overfitting of data?
+    - tell me about overfitting? 
+    - explain overfitting
+    - define overfitting
+    - what causes overfitting
+    - describe overfitting
+    - tell me about overfitting in machine learning? 
+    - What is Overfitting and how can you avoid it??
+    - how to avoid overfitting? 
+    - how to detect overfitting?
+    - How do I know if my model is Overfitting?
+    - How do I fix Overfitting?
+    - how to check overfitting
+    - How do you ensure you're not overfitting with a model?
+    - What is Overfitting? And how do you ensure you're not overfitting with a model?
+
+- intent: faq/underfitting
+  examples: |
+    - what is underfitting?
+    - What is underfitting in machine learning?
+    - What is meant by underfitting of data?
+    - tell me about underfitting? 
+    - explain overfitting
+    - define underfitting
+    - What causes Underfitting?
+    - describe underfitting
+    - tell me about underfitting in machine learning? 
+    - What is underfitting and how can you avoid it??
+    - how to avoid underfitting? 
+    - how to detect underfitting?
+    - How do I know if my model is underfitting?
+    - How do I fix underfitting?
+    - how to check underfitting
+    - How do you ensure you're not underfitting with a model?
+    - Is Underfitting bad?
+    - What is underfitting? And how do you ensure you're not underfitting with a model?
+
+- intent: faq/over_under_fit
+  examples: |
+    - What is Overfitting and Underfitting with example?
+    - How do you deal with Overfitting and Underfitting?
+    - What is Underfitting and Overfitting in machine learning and how do you deal with it?
+    - what is underfitting and overfitting in machine learning
+    - overfitting and underfitting difference
+    - could you please tell me difference between overfitting and underfitting
+    - how to check if the model is overfitting or underfitting
+
+- intent: faq/supervised
+  examples: |
+    - What is supervised learning with example?
+    - What is supervised learning used for?
+    - What are the types of supervised learning?
+    - What is supervised learning in simple words?
+    - what is supervised learning in simple words
+    - What is supervised learning with examples?
+    - could you please tell me about supervised learning?
+    - What exactly is supervised learning?
+    - What is supervised learning with example?
+    - what is the meaning of supervised learning ?
+    - what is the concept of supervised learning
+    - What is the principle of supervised learning?
+    - I wanna know about supervised learning
+    - what is the simple definition of supervised learning?
+    - supervised learning meaning
+    - simple definition of supervised learning
+    - What is supervised learning in simple terms?
+    - supervised learning in layman terms
+    - Where is supervised learning used?
+    - what is supervised learning in ai
+    - supervised learning in artificial intelligence
+    - What comes under supervised learning?
+
+- intent: faq/unsupervised
+  examples: |
+    - What is unsupervised learning with example?
+    - What is unsupervised learning used for?
+    - What are the types of unsupervised learning?
+    - What is unsupervised learning in simple words?
+    - what is unsupervised learning in simple words
+    - What is unsupervised learning with examples?
+    - could you please tell me about unsupervised learning?
+    - What exactly is unsupervised learning?
+    - What is unsupervised learning with example?
+    - what is the meaning of unsupervised learning ?
+    - what is the concept of unsupervised learning
+    - What is the principle of unsupervised learning?
+    - I wanna know about unsupervised learning
+    - what is the simple definition of unsupervised learning?
+    - unsupervised learning meaning
+    - simple definition of unsupervised learning
+    - What is unsupervised learning in simple terms?
+    - unsupervised learning in layman terms
+    - Where is unsupervised learning used?
+    - what is unsupervised learning in ai
+    - unsupervised learning in artificial intelligence
+    - What comes under unsupervised learning?
+
+- intent: faq/super_unsuper_diff
+  examples: |
+    - What are supervised and unsupervised learning?
+    - what is difference between supervised and unsupervised learning
+    - list the difference between supervised and unsupervised learning
+    - what is main difference between supervised and unsupervised learning
+    - could you please explain the differences between supervised and unsupervised learning
+    - explain difference between supervised and unsupervised learning
+    - describe difference between supervised and unsupervised learning
+    - What is the main key difference between supervised and unsupervised machine learning?
+
+- intent: faq/machine_learning_algo
+  examples: |
+    - What are the algorithms used in machine learning?
+    - What are learning algorithms?
+    - types of machine learning algorithms
+    - machine learning algorithms for beginners
+    - How many algorithms are there in machine learning?
+    - what are machine learning algorithms
+
+- intent: faq/roc
+  examples: |
+    - what is ROC curve?
+    - Explain how ROC curve works?
+    - what is roc curve in machine learning
+    - What is ROC curve used for?
+    - What does a ROC curve tell you?
+    - what is receiver operating characteristic curve
+    - What is a ROC curve and what does it represent?
+    - Why is it called receiver operating characteristic?
+    - Explain receiver operating characteristic
+    - define receiver operating characteristic
+    - please tell me about receiver operating characteristic
+    - could you please tell me about ROC?
+
+- intent: faq/auc
+  examples: |
+    - What is AUC in ROC curve?
+    - What is a good ROC AUC score?
+    - How do you get AUC from ROC curve?
+    - What is AUC machine learning?
+    - How do you interpret ROC AUC scores?
+    - What does AUC stand for?
+    - What does area under the curve mean?
+    - What is area under the curve in statistics?
+    - What is area under the curve in machine learning?
+    - Why is the area under a curve important?
+    - define auc
+    - define area under a curve
+    - please tell me about are under the curve
+    - could you please tell me about AUC?
+
+- intent: faq/regularization
+  examples: |
+    - what is regularization?
+    - what is regularization in data mining?
+    - what is regularization in machine learning?
+    - What is the use of regularization?
+    - What is meant by regularization?
+    - What is regularization and what problem does it try to solve?
+    - What is l1 and l2 regularization?
+    - Explain the difference between L1 and L2 regularization
+    - what is the difference between l1 and l2 regularization
+    - When does regularization come into play in Machine Learning?
+    - what is l1 regularization?
+    - what is l2 regularization?
+    - could you please tell me about regularization?
+    - What exactly is regularization?
+    - What is regularization with example?
+    - what is the meaning of regularization?
+    - what is the concept of regularization
+    - What is the principle of regularization?
+    - I wanna know about regularization
+    - what is the simple definition of regularization?
+    - regularization meaning
+    - simple definition of regularization
+    - What is regularization in simple terms?
+    - regularization in layman terms
+    - Where is regularization used?
+   
+- intent: faq/diff_likelihood_prob
+  examples: |
+    - distinction between probability and likelihood
+    - Why likelihood is not a probability?
+    - What is the difference between the likelihood and the posterior probability?
+    - What is the difference between probability and likelihood?
+    
+- intent: faq/ensemble
+  examples: |
+    - what is ensemble learning
+    - What do you mean by ensemble learning?
+    - Why do we use ensemble learning?
+    - what is ensembling?
+    - What is Ensemble?
+    - types of ensemble learning
+    - ensemble learning algorithm examples
+    - advantages of ensemble methods
+    - ensemble learning in machine learning
+    - ensemble learning in artificial intelligence
+    - what is the concept of ensemble learning
+
+- intent: faq/bagging
+  examples: |
+    - what is bagging
+    - What do you mean by bagging?
+    - Why do we use bagging?
+    - types of bagging algorithms
+    - bagging algorithm examples
+    - advantages of bagging
+    - bagging in machine learning
+    - bagging in artificial intelligence
+    - what is the concept of bagging
+    - what is bagging in machine learning
+    - How do you do bagging?
+    - Which algorithm is based on bootstrap aggregation?
+    - what is bootstrap aggregation
+    - What is bagging in ML?
+
+- intent: faq/boosting
+  examples: |
+    - what is boosting
+    - What do you mean by boosting?
+    - Why do we use boosting?
+    - types of boosting algorithms
+    - boosting algorithm examples
+    - advantages of boosting
+    - boosting in machine learning
+    - boosting in artificial intelligence
+    - what is the concept of boosting
+    - what is boosting in machine learning
+    - What is boosting in ML?
+
+- intent: faq/bag_boost
+  examples: |
+    - what is bagging and boosting in machine learning
+    - what is the difference between bagging and boosting in machine learning
+    - Is Boosting better than bagging?
+    - compare bagging and boosting
+    - comparison between bagging and boosting
+    - bagging vs boosting
+
+- intent: faq/random_forest
+  examples: |
+    - what is random forest in machine learning
+    - What is random forest and how it works?
+    - What does random forest mean?
+    - What is Random Forest model used for?
+    - Where can I use random forest?
+    - explan random forest
+    - describe random forest
+    - define random forest
+    - definition of random forest
+    - random forest algorithm is supervised or unsupervised?
+    - random forest algorithm in machine learning 
+
+- intent: faq/logistic_regression
+  examples: |
+    - what is logistic regression in machine learning
+    - what is logistic regression algorithm
+    - explain logistic regression algorithm
+    - what is logistic regression and how it works?
+    - what is logistic regression?
+    - What is the use of logistic regression in machine learning?
+    - What is meant by logistic regression?
+    - What is logistic regression with example?
+    - What is meant by logistic regression in machine learning?
+    - explan logistic regression
+    - describe logistic regression
+    - define logistic regression
+    - definition of logistic regression
+    - logistic regression algorithm is supervised or unsupervised?
+    - logistic regression algorithm in machine learning 
+
+- intent: faq/svm
+  examples: |
+    - what is support vector machine in machine learning
+    - What is SVM in machine learning?
+    - What is support vector machines with example?
+    - What is SVM and how it works?
+    - What is SVM used for?
+    - What is support vector machine used for?
+    - What is a support vector in SVM?
+    - could you please explain support vector machines
+    - could you please explain svm
+    - please explain svm
+    - tell me the definition of support vector machine
+    - define svm
+    - define support vector machine
+    - tell me the definition of svm
+
+- intent: faq/naive_bayes
+  examples: |
+    - Why is Naive Bayes naive?
+    - what is naive in naive bayes algorithm?
+    - what is naive bayes algorithm in machine learning
+    - What is naive Bayes in machine learning?
+    - What is the benefit of naive Bayes in machine learning?
+    - What is naive Bayes algorithm when we can use this algorithm in NLP?
+    - naive bayes algorithm comes under which learning
+    - naive bayes algorithm example
+    - naive bayes algorithm comes under machine learning or deep learning
+    - could you explain naive bayes algorithm
+    - please define naive bayes algorithm
+    - give me the definition of naive bayes algorithm
+    - what is the concept of naive bayes algorithm
+
+- intent: faq/gen_disc
+  examples: |
+    - what are generative and discriminative algorithms
+    - What is the difference between a generative and discriminative algorithm?
+    - What are generative and discriminative models?
+    - Is SVM generative or discriminative?
+    - Is logistic regression a discriminative or generative model Why?
+    - when to use generative or discriminative models?
+    - comprison of generative and discriminative models
+    - generative vs discriminative models
+
+- intent: faq/classification
+  examples: |
+    - what is classification in machine learning
+    - What is classifier in machine learning?
+    - What is classification of algorithm?
+    - What are the classification techniques?
+    - What is classification example?
+    - what is a classifier in machine learning?
+    - what is classification in machine learning with example
+    - classification is a supervised or unsupersived learning
+    - what is binary classification in machine learning
+    - what is classification problem in machine learning?
+    - When should you use classification over regression?
+
+- intent: faq/regression
+  examples: |
+    - what is regression in machine learning
+    - What is regression in machine learning with example?
+    - Why regression is used in machine learning?
+    - What does regression mean?
+    - What is regression and types of regression?
+    - what is linear regression in machine learning
+    - types of regression in machine learning?
+    
+- intent: faq/descision_tree
+  examples: |
+    - What is decision tree in machine learning with example? 
+    - What do you mean by decision tree?
+    - Why do we use decision tree?
+    - What is decision tree in machine learning?
+    - what is cart algorithm in machine learning
+    - How does CART algorithm work?
+    - What is CART technique?
+    - What is id3 algorithm in machine learning?
+    - cart algorithm in data mining
+    - advantages of cart algorithm
+    - what is cart?
+
+- intent: faq/data_mining
+  examples: |
+    - what is data mining
+    - What is data mining in simple terms?
+    - What is data mining and its types?
+    - Why is data mining needed?
+    - Where is data mining used?
+    - What is data mining job?
+    - How is data mining done?
+    - What are the steps of data mining?
+    - What is data mining with real life examples?
+
+- intent: faq/feature_select
+  examples: |
+    - what is feature selection in machine learning
+    - What is feature selection in ML?
+    - How does feature selection work?
+    - What are feature selection techniques in machine learning?
+    - What is feature selection algorithm?
+    - What are feature selection methods in machine learning?
+    - Why feature selection is important in machine learning?
+
+- intent: faq/feat_engg
+  examples: |
+    - what is feature engineering
+    - What is feature engineering example?
+    - Why is feature engineering important?
+    - What is feature engineering in Python?
+    - What is feature engineering techniques?
+    - feature engineering techniques for machine learning
+    - what do you mean by feature engineering in machine learning?
+
+- intent: faq/dim_red
+  examples: |
+    - what is dimensionality reduction in machine learning
+    - What is dimensionality reduction example?
+    - What is feature reduction in machine learning?
+    - What is dimensionality reduction problem why is it necessary in machine learning?
+    - What are 3 ways of reducing dimensionality?
+    - What is a major goal of dimensionality reduction?
+    - What are the drawbacks of dimensionality reduction?
+    - what are dimensionality reduction techniques?
+
+- intent: faq/curse_dimension
+  examples: |
+    - what is curse of dimensionality
+    - What is curse of dimensionality in machine learning?
+    - What is the curse of dimensionality Can you give an example?
+    - What is the curse of dimensionality and how do you tackle it?
+    - how to overcome curse of dimensionality
+    - explain curse of dimensionality
+    - curse of dimensionality solution
+    - What is the curse of dimensionality Why is dimensionality reduction even necessary?
+    - What is meant by curse of dimensionality?
+    - what is the solution of curse of dimensionality?
+
+- intent: faq/automl
+  examples: |
+    - what is automl 
+    - what is automl in machine learning
+    - What does AutoML do?
+    - Will AutoML replace data scientists?
+    - Who uses AutoML?
+    - what is the use of automl
+    - how to use automl
+
+- intent: faq/cross_val
+  examples: |
+    - what is cross validation in machine learning
+    - what is cross validation
+    - What does cross validation do?
+    - What is cross validation set in machine learning?
+    - What are the different types of cross validation?
+    - Why is cross validation better?
+    - what is k fold cross validation
+    - What is the use of K fold cross validation?
+    - How do you interpret k fold cross validation?
+    - what is the purpose of performing cross validation
+
+- intent: faq/svm
+  examples: |
+    - what is support vector machine
+    - what is support vector machine in machine learning
+    - What is support vector machines with example?
+    - How does a support vector machine work?
+    - What is a support vector in SVM?
+    - What are the advantages and disadvantages of support vector machines SVM?
+    - what is svm?
+    - what is kernel trick in svm?
+    - explain support vector machine
+    - define support vector machine
+
+- intent: faq/adaboost
+  examples: |
+    - what is adaboost algorithm in machine learning
+    - What is AdaBoost used for?
+    - How do you use an AdaBoost classifier?
+    - what is adaboost?
+    - explain adaboost
+    - define adaboost
+
+- intent: faq/gradient_boost
+  examples: |
+    - what is gradient boosting in machine learning
+    - How does gradient boosting tree work?
+    - what is gradient boosting machine?
+
+- intent: faq/gradient_descent
+  examples: |
+    - What is gradient descent in machine learning?
+    - what is gradient descent
+    - What is gradient descent neural network?
+    - How do you find the gradient descent?
+    - How do you solve gradient descent problems?
+    - How do you implement gradient descent?
+
+- intent: faq/how_to_help
+  examples: |
+    - how can you help me
+    - how do I ask for help
+    - can you help me
+    - could you please help me
+    - help
+    - I need your help
+- intent: faq/xgboost
+  examples: |
+    - what is xgboost
+    - what is xgboost in machine learning
+    - What is the use of XGBoost?
+    - How does XGBoost predict?
+    - How does XGBoost work internally?
+    - What's the difference between gradient boosting and XGBoost?
+    - How is Xgboost different from gradient boosting?
+
+- intent: faq/hyper_para
+  examples: |
+    - what is hyperparameter in machine learning
+    - what is model hyperpparameter
+    - Why do we need hyper parameter?
+    - What is the difference between parameter and Hyperparameter?
+    - what do you mean by hyperparameter
+    - What are Hyperparameters in machine learning?
+    - explain hyper parameters
+
+- intent: faq/hyper_para_tuning
+  examples: |
+    - Why Hyperparameter tuning is important?
+    - Which strategy is used for tuning hyper parameters?
+    - how do  tune hyperparameters in machine learning?
+    - how to tune hyper parameter ?
+    - explain hyper parameters
+    - examples of hyper parameter tuning in machine learning
+
+- intent: faq/diff_para_hype
+  examples: |
+    - difference between parameter and hyperparameter
+    - what is the difference between parameter and hyperparameter
+    - model parameters and hyperparameters in machine learning what is the difference
+    - describe the differences between parameters and hyparameters in machine learning
+    - explain the differences between parameters and hyparameters in machine learning
+
+
+- intent: faq/pca
+  examples: |
+    - what is pca
+    - What is PCA used for?
+    - What is PCA in simple terms?
+    - What is PCA and how does it work?
+    - What is a principal component in PCA?
+    - How do you read PCA results?
+    - How is PCA calculated?
+    - When should we use PCA?
+    - What are eigenvalues in PCA?
+    - What does a PCA plot tell you?
+    - What are PCA components?
+    - what is principal component analysis?
+- intent: faq/pca_rot
+  examples: |
+    - why rotation is required in pca
+    - What is rotation in PCA?
+    - Is rotation necessary in PCA?
+    - Is rotation necessary in PCA? If yes, Why? What will happen if you don’t rotate the components?
+    - rotation in PCA?
+    - what do you mean by rotation of components in PCA?
+    - explain rotation in PCA
+- intent: faq/cluster
+  examples: |
+    - what is clustering in machine learning
+    - What is meant by clustering in machine learning?
+    - What type of learning is clustering?
+    - What is clustering and its types?
+    - Where is clustering used?
+    - Why is clustering used?
+    - clustering is supervised or unsupervised
+
+- intent: faq/k_means_clustering
+  examples: |
+    - what is k means clustering
+    - What is K means clustering used for?
+    - What is meant by K means algorithm?
+    - How do you use K means clustering?
+    - How do you choose K in K means clustering?
+    - k means clustering simple explanation
+    - What are the basic steps for K means clustering?
+    - How does K mean clustering works explain with example?
+
+- intent: faq/knn
+  examples: |
+    - what is knn in machine learning
+    - What is the use of KNN algorithm?
+    - What is meant by KNN algorithm?
+    - How is Knn calculated?
+    - What is KNN algorithm example?
+    - What is the K value in Knn?
+    - what is k in knn algorithm?
+    - When should I use Knn?
+    - what is k nearest neighbor algorithm
+    - What is K Nearest Neighbor algorithm in machine learning?
+    - How does K nearest neighbors algorithm work?
+    - What does the K stand for in K nearest neighbors?
+
+- intent: faq/kmeans_knn
+  examples: |
+    - what is the difference between kmean and knn algorithm
+    - compare knn and kmeans algorithm
+    - explain the difference between knn and kmeans clustering algorithm
+    - difference between knn and kmeans
+    - difference between kmeans and knn
+- intent: faq/gradient_desc
+  examples: |
+    - What is gradient descent in machine learning?
+    - What is gradient descent
+    - explain gradient descent algorithm
+    - define gradient descent
+    - what do you mean by gradient descent
+    - What is gradient descent in AI?
+    - How does gradient descent work?
+    - What is cost function in gradient descent?
+    - gradient descent formula
+    - explain the working of gradient descent
+- intent: faq/ml_pipe
+  examples: |
+    - What is machine learning pipeline?
+    - What is ml pipeline?
+    - could please explain machine learning pipeline
+    - explain ml pipeline
+    - define machine learning pipeline
+    - define ml pipeline
+    - explain machine learning pipeline
+    - what is the meaning of machine learning pipeline
+    - what is meant by ml pipeline?
+    - describe ml pipeline
+    - describe machine learning pipeline
+    - what do you mean by machine learning pipeline?
+
+- intent: faq/salary
+  examples: |
+    - How much money does a machine learning engineer make?
+    - What is the salary of machine learning engineer?
+    - how much machine learning engineer earn
+    - What is the salary of a Machine Learning Engineer in India?
+- intent: faq/types_gradient_desc
+  examples: |
+    - what are the type of gradient descent
+    - how many types of gradient descent are there?
+    - explain different types of gradient descent algorithm
+    - define different types of gradient descent 
+
+- intent: faq/neural_net
+  examples: |
+    - What is a Neural Network?
+    - What is neural network in simple words?
+    - What does a neural network do?
+    - What is neural network and its types?
+    - What is a neural network in machine learning?
+    - what is artificial neural network
+    - What is artificial neural network with example?
+    - What is an artificial neural network and how does it work?
+    - What is artificial neural network algorithm?
+    - what is ann?
+- intent: ask_query
+  examples: |
+    - i'm looking for important [books](item:book) in machine learning 
+    - [Machine Learning Books](item:book)
+    - [Machine Learning Courses](item:course)
+    - [Machine Learning Skills](item:skill)
+- intent: dl_query
+  examples: |
+    - what is deep learning?
+    - what is DL?
+    - explain deep learning
+    - explain DL
+    - how can you define deep learning?
+    - how DL works? 
+    - how deep learning works? 
+    - definition of deep learning
+    - define DL
+    - define deep learning
+    - definition of deep learning
+    - what do you mean by deep learning?
+    - what is deep learning exactly?
+    - what is meant by deep learning?
+    - what is deep learning in simple words?
+    - how can you explain deep learning to a school going kid?
+    - could you please tell me about DL?
+    - could you please tell me about  deep learning?
+    - What exactly is  deep learning?
+    - What is  deep learning in simple words?
+    - What is  deep learning with example?
+    - what is the meaning of  deep learning?
+    - what is the concept of  deep learning
+    - What is the principle of  deep learning?
+    - I wanna know about  deep learning
+    - what is the simple definition of  deep learning?
+    - deep learning meaning
+    - simple definition of deep learning
+    - What is  deep learning in simple terms?
+    - deep learning in layman terms
+    - how to explain  deep learning to a kid?
+    - how to explain  deep learning to a child?
+    - how to explain  deep learning to children?
+    - How deep learning will help humans?
+    - How deep learning affect our life?
+    - What are the main goals of deep learning?
+- intent: ml_query
+  examples: |
+    - what is machine learning?
+    - what is ML?
+    - explain machine learning
+    - explain ML
+    - how can you define machine learning?
+    - how ML works? 
+    - how machine learning works? 
+    - definition of machine learning
+    - define ML
+    - define machine learning
+    - definition of machine learning
+    - what do you mean by machine learning?
+    - what is machine learning exactly?
+    - what is meant by machine learning?
+    - what is machine learning in simple words?
+    - how can you explain machine learning to a school going kid?
+    - could you please tell me about ML?
+    - could you please tell me about  machine learning?
+    - What exactly is  machine learning?
+    - What is machine learning in simple words?
+    - What is  machine learning with example?
+    - what is the meaning of machine learning?
+    - what is the concept of machine learning
+    - What is the principle of machine learning?
+    - I wanna know about  machine learning
+    - what is the simple definition of machine learning?
+    - machine learning meaning
+    - simple definition of machine learning
+    - What is  machine learning in simple terms?
+    - machine learning in layman terms
+    - how to explain  machine learning to a kid?
+    - how to explain  machine learning to a child?
+    - how to explain  machine learning to children?
+    - How machine learning will help humans?
+    - How machine learning affect our life?
+    - What are the main goals of machine learning?
+- intent: faq/books
+  examples: |
+    - what are the best books for machine learning
+    - What are the top 10 best books on machine learning?
+    - What are the must read books in machine learning?
+    - What is the best book for machine learning in Python?
+    - Which book is best for machine learning?
+    - What are the best books to self-learn machine learning fundamentals?
+    - please suggest some good books in machine learning
+- intent: faq/course
+  examples: |
+    - what are top courses in machine learning
+    - Which course is best for machine learning?
+    - Which ml course best?
+    - Which is the best course for machine learning on udemy?
+    - Which course is best for AI?
+    - Which online course is best for machine learning?
+    - Which is the best certificate course for machine learning?
+    - machine learning course for beginners
+    - machine learning course for beginners free
+- intent: faq/ml_job
+  examples: |
+    - what skills are needed for machine learning jobs
+    - What does it take to become a machine learning engineer?
+    - What are the skills needed for machine learning?
+    - What background is needed for machine learning?
+    - How do I start a career in machine learning?
+    - What skills do you need for AI?
+    - what are the requirements for machine learning
+    - how to become a machine learning engineer
+    - how to become a machine learning engineer without a degree
+    - please tell me what skills needed for machine learning engineer
+    - skills for machine learning
+    - what are the most in-demand machine learning skills
+    - what minimum skills required for machine learning

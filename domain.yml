@@ -1,0 +1,620 @@
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- ask_query
+- goodbye
+- affirm
+- deny
+- bot_challenge
+- out_of_scope
+- faq
+- chitchat
+- thank
+- dl_query
+- ml_query
+- wierd
+entities:
+- item
+- location
+slots:
+  item:
+    type: text
+    influence_conversation: true
+responses:
+  utter_greet_ask:
+  - buttons:
+    - payload: Machine Learning Books
+      title: Machine Learning Books
+    - payload: Machine Learning Courses
+      title: Machine Learning Courses
+    - payload: Machine Learning Skills
+      title: Machine Learning Skills
+    text: Hi, I am Moltron, an ML Knowledge Bot. What do you want to know in Machine Learning today? You
+      can start by selecting from below options.😃
+  utter_what_else:
+  - text: So, what else you want to know in Machine Learning?
+  utter_did_that_help:
+  - text: Hope it helps you. Anything else you want to know? 🤓
+  - text: Is there anything else you like to know? 🤓
+  - text: Is there anything else I can help you? 🤓
+  - text: Hope your doubts are cleared now. Is there anything else you want to know?
+      🤓
+  utter_welcome:
+  - text: My pleasure !! 😊
+  - text: Welcome !! Happy to help 😊
+  utter_faq/machine_learning:
+  - text: "Machine learning is an application of artificial intelligence (AI) that\
+      \ provides systems the ability to automatically learn and improve from experience\
+      \ without being explicitly programmed. Machine learning focuses on the development\
+      \ of computer programs that can access data and use it to learn for themselves.\n\
+      The process of learning begins with observations or data, such as examples,\
+      \ direct experience, or instruction, in order to look for patterns in data and\
+      \ make better decisions in the future based on the examples that we provide.\
+      \ \n**The primary aim is to allow the computers learn automatically** without\
+      \ human intervention or assistance and adjust actions accordingly.\n"
+  utter_faq/artificial_intelligence:
+  - text: "Artificial intelligence (AI) refers to the simulation of human intelligence\
+      \ in machines that are programmed to think like humans and mimic their actions.\n\
+      The term may also be applied to any machine that exhibits traits associated\
+      \ with a human mind such as learning and problem-solving. \nThe term artificial\
+      \ intelligence was coined in 1956, but AI has become more popular today thanks\
+      \ to increased data volumes, advanced algorithms, and improvements in computing\n\
+      power and storage. Some of the examples of artificial intelligence area as follows-\n\
+      **1. Google Maps and Ride-Hailing Applications**\n**2. Face Detection and Recognition**\n\
+      **3. Search and Recommendation Algorithms**\n**4. Chatbots**\n**5. Automated\
+      \ financial investing**\n**6. Social Media Monitoring etc.**\n"
+  utter_faq/nlp:
+  - text: "Natural language processing (NLP) is a branch of artificial intelligence\
+      \ that helps computers understand, interpret and manipulate human language.\
+      \ \nNLP draws from many disciplines, including computer science and computational\
+      \ linguistics, in its pursuit to fill the gap between human communication and\
+      \ computer understanding.\n"
+  utter_faq/rl:
+  - text: "Reinforcement Learning deals with learning via interaction and feedback,or\
+      \ in other words learning to solve a task by trial and error, or in other-otherwords\
+      \ acting in an environment and receiving rewards for it. \nEssentially anagent\
+      \ (or several) is built that can perceive and interpret the environmentin which\
+      \ is placed, furthermore, it can take actions and interact with it. \nReinforcementlearning\
+      \ is similar to 'human learning'. Remember the first time you were tryingto\
+      \ learn to ride a bicycle? Learning how to balance and manoeuvre comes withexperience.\
+      \ Maybe, when you had a fall (a negative experience), you learnt thatthe action\
+      \ which led to the fall was wrong and you shouldn’t do that again.\n Similarly,\
+      \ when you had a positive experience, you learnt what actions (howto keep your\
+      \ feet on the pedal, how much to turn the handlebar, etc) led toa happy ride."
+  utter_faq/bias:
+  - image: https://miro.medium.com/max/1820/1*p725FfM2K5q3HoDp16nRDA.png
+    text: Bias is an error from erroneous assumptions in the learning algorithm. High
+      bias can cause an algorithm to miss the relevant relations between features
+      and target outputs. This phenomenon is also known as underfitting.
+  utter_faq/variance:
+  - image: https://i.ibb.co/Ln5YBqW/variance.png
+    text: Variance, in the context of Machine Learning, is a type of error that occurs
+      due to a model's sensitivity to small fluctuations in the training set. High
+      variance would cause an algorithm to model the noise in the training set. This
+      is most commonly referred to as overfitting.
+  utter_faq/bias_variance_tradeoff:
+  - image: https://i.ibb.co/ZNY5NxL/bv.jpg
+    text: "Bias is the difference between the average prediction of our model and\
+      \ the correct value which we are trying to predict. Model with high bias pays\
+      \ very little attention to the training data and oversimplifies the model.\n\
+      It always leads to high error on training and test data. Variance is the variability\
+      \ of model prediction for a given data point or a value which tells us spread\
+      \ of our data. \nModel with high variance pays a lot of attention to training\
+      \ data and does not generalize on the data which it hasn’t seen before. As a\
+      \ result, such models perform very well on training data but has high error\
+      \ rates on test data.\n"
+  utter_faq/overfitting:
+  - text: "Overfitting happens when a model learns the detail and noise in the training\
+      \ data to the extent that it negatively impacts the performance of the model\
+      \ on new data. \nThis means that the noise or random fluctuations in the training\
+      \ data is picked up and learned as concepts by the model. The problem is that\
+      \ these concepts do not apply to new data and negatively impact the models ability\
+      \ to generalize.\n"
+  utter_faq/underfitting:
+  - image: https://docs.aws.amazon.com/machine-learning/latest/dg/images/mlconcepts_image5.png
+    text: "Underfitting, the counterpart of overfitting, happens when a machine learning\
+      \ model is not complex enough to accurately capture relationships between a\
+      \ dataset’s features and a target variable. \nAn underfitted model results in\
+      \ problematic or erroneous outcomes on new data, or data that it wasn’t trained\
+      \ on, and often performs poorly even on training data. Above figure shows the\
+      \ graphical representation of underfitting.\n"
+  utter_faq/over_under_fit:
+  - image: https://i.ibb.co/LC7mKs1/over-under.jpg
+    text: "__Underfitting:__ If we have an underfitted model, this means that we do\
+      \ not have enough parameters to capture the trends in the underlying data. In\
+      \ this case the model will have high bias. \n__Overfitting:__ If we have overfitted\
+      \ model, this means that we have too many parameters to be justified by the\
+      \ actual underlying data and therefore build an overly complex model. The result\
+      \ is a model that has high variance.\n"
+  utter_faq/supervised:
+  - text: "__Supervised learning__, also known as supervised machine learning, is\
+      \ a subcategory of machine learning and artificial intelligence. Supervised\
+      \ learning uses a training set to teach models to yield the desired output.\
+      \ \nThis training dataset includes inputs and correct outputs, which allow the\
+      \ model to learn over time. The algorithm measures its accuracy through the\
+      \ loss function, adjusting until the error has been sufficiently minimized.\
+      \ Supervised learning can be separated into two types of problems- classification\
+      \ and regression\n1. __Classification__ uses an algorithm to accurately assign\
+      \ test data into specific categories.\n2. __Regression__ is used to understand\
+      \ the relationship between dependent and independent variables. It is commonly\
+      \ used to make projections such as for sales revenue for a given business.\n\
+      __Examples of supervised learning-__ \nprediction of house prices, spam mail\
+      \ detection, text classification, object recognition etc.\n"
+  utter_faq/unsupervised:
+  - text: "__Unsupervised learning__, refers to inferring underlying patterns from\
+      \ an unlabeled dataset without any reference to labeled outcomes or predictions.\
+      \ There are several methods of unsupervised learning, but clustering is the\
+      \ most commonly used unsupervised learning technique.\n__Examples of unsupervised\
+      \ learning-__\n__Customer segmentation__, or understanding different customer\
+      \ groups around which to build marketing or other business strategies.\n__Genetics__,\
+      \ for example clustering DNA patterns to analyze evolutionary biology.\n__Recommender\
+      \ systems__, which involve grouping together users with similar viewing patterns\
+      \ in order to recommend similar content.\n__Anomaly detection__, including fraud\
+      \ detection or detecting defective mechanical parts (i.e., predictive maintenance).\n"
+  utter_faq/super_unsuper_diff:
+  - image: https://lakshaysuri.files.wordpress.com/2017/03/sup-vs-unsup.png?w=648
+    text: "In a __supervised learning__ model, the algorithm learns on a labeled dataset,\
+      \ providing an answer key that the algorithm can use to evaluate its accuracy\
+      \ on training data. \nAn __unsupervised__ model, in contrast, provides unlabeled\
+      \ data that the algorithm tries to make sense of by extracting features and\
+      \ patterns on its own.\n"
+  utter_faq/machine_learning_algo:
+  - text: "Here is the list of commonly used machine learning algorithms.-\n- Linear\
+      \ Regression\n- Logistic Regression\n- Decision Tree\n- Support Vector Machine\
+      \ (SVM)\n- Naive Bayes\n- k Nearest Neighbor (KNN)\n- K-Means\n- Random Forest\n\
+      - Dimensionality Reduction Algorithms\n- Gradient Boosting Machines (GBM)\n\
+      - Extreme Gradient Boosting (XGBoost)\n- LightGBM\n- CatBoost\n"
+  utter_faq/regularization:
+  - text: "__Regularization__ is a technique which is used to solve the overfitting\
+      \ problem of the machine learning models. There are two types of regularization\
+      \ as follows- \n__L1 Regularization or Lasso Regularization__  adds a penalty\
+      \ to the error function. The penalty is the sum of the absolute values of weights.\n\
+      __L2 Regularization or Ridge Regularization__ L2 Regularization or Ridge Regularization\
+      \ also adds a penalty to the error function. But the penalty here is the sum\
+      \ of the squared values of weights.\n"
+  utter_faq/xgboost:
+  - image: https://i.ibb.co/b5S94MX/xgboost.jpg
+    text: "XGBoost is a decision-tree-based ensemble Machine Learning algorithm that\
+      \ uses a gradient boosting framework. XGBoost algorithm was developed as a research\
+      \ project at the University of Washington by Tianqi Chen and Carlos Guestrin\
+      \ in 2016. \nXGBoost and Gradient Boosting Machines (GBMs) are both ensemble\
+      \ tree methods that apply the principle of boosting weak learners (CARTs generally)\
+      \ using the gradient descent architecture.\nHowever, XGBoost improves upon the\
+      \ base GBM framework through systems optimization and algorithmic enhancements.\n"
+  utter_faq/diff_likelihood_prob:
+  - image: https://miro.medium.com/max/5200/1*F_34lcOq-XnaSx0dsHmqQw.png
+    text: "In most basic terms, __Probability__ attaches to possible results, while\
+      \ __likelihood__ attaches to hypothesis In other words, __Probability__ corresponds\
+      \ to finding the chance of something given a sample distribution of the data,\n\
+      while on the other hand, __Likelihood__ refers to finding the best distribution\
+      \ of the data given a particular value of some feature or some situation in\
+      \ the data.\n"
+  utter_faq/ensemble:
+  - image: https://cdn-images-1.medium.com/max/1000/0*c0Eg6-UArkslgviw.png
+    text: "Ensemble learning is the process by which multiple models, such as classifiers\
+      \ or experts, are strategically generated and combined to solve a particular\
+      \ computational intelligence problem. Ensemble learning is primarily used to\
+      \ improve the (classification, prediction, function approximation, etc.) performance\
+      \ of a model, or reduce the likelihood of an unfortunate selection of a poor\
+      \ one.\n"
+  utter_faq/bagging:
+  - image: https://pluralsight2.imgix.net/guides/38f3d18e-81a9-471f-9a1c-3172b5fa3246_5.jpg
+    text: "Bagging is the acronym for bootstrap aggregation. Its main objective is\
+      \ to **reduce the variance of a decision tree while retaining the bias**. In\
+      \ bagging, several subsets of data from training sample chosen randomly with\
+      \ replacement.\nThen, each collection of subset data is used to train their\
+      \ decision trees. Finally, on combining different decision tree models by averaging\
+      \ their predictions, the combined ensemble model is more robust than a single\
+      \ decision tree classifier.\n"
+  utter_faq/boosting:
+  - image: https://miro.medium.com/max/544/1*m2UHkzWWJ0kfQyL5tBFNsQ.png
+    text: "Boosting is an ensemble machine learning method for building a strong learner\
+      \ from the number of weak learners. It is based on a sayi **Mistakes are meant\
+      \ for learning, not for repeating**. \nThe main idea behind boosting is to train\
+      \ weak learners sequentially, each trying to correct its predecessor.\nThere\
+      \ are basically two main types of boosting methods **Adaptive boosting also\
+      \ named as Adaboost** and the other one is **Gradient boosting**.\n"
+  utter_faq/descision_tree:
+  - image: https://s3-ap-southeast-1.amazonaws.com/he-public-data/Fig%201-18e1a01b.png
+    text: "A decision tree is a tree-like graph with nodes representing the place\
+      \ where we pick an attribute and ask a question; edges represent the answers\
+      \ the to the question; and the leaves represent the actual output or class label.\
+      \ \nThey are used in non-linear decision making with simple linear decision\
+      \ surface.\nDecision trees classify the examples by sorting them down the tree\
+      \ from the root to some leaf node, with the leaf node providing the classification\
+      \ to the example. \nEach node in the tree acts as a test case for some attribute,\
+      \ and each edge descending from that node corresponds to one of the possible\
+      \ answers to the test case.\nThis process is recursive in nature and is repeated\
+      \ for every subtree rooted at the new nodes. \nThe example of decision tree\
+      \ is shown in the above figure.\n"
+  utter_faq/k_means_clustering:
+  - image: https://static.javatpoint.com/tutorial/machine-learning/images/k-means-clustering-algorithm-in-machine-learning.png
+    text: "K-means clustering is one of the simplest and popular unsupervised machine\
+      \ learning algorithms.\nThe K-means algorithm identifies k number of centroids,\
+      \ and then allocates every data point to the nearest cluster, while keeping\
+      \ the centroids as small as possible.\nThe ‘means’ in the K-means refers to\
+      \ averaging of the data; that is, finding the centroid.\n"
+  utter_faq/dim_red:
+  - image: https://miro.medium.com/max/510/1*vah8IolNqlxNHq9ysVzYkw.png
+    text: "Dimensionality reduction is simply, the process of reducing the dimension\
+      \ of your feature set. The need for dimensionality reduction is because of __curse\
+      \ of dimensionality__.\n__Curse of Dimesionality__\\n The curse of dimensionality\
+      \ refers to all the problems that arise when working with data in the higher\
+      \ dimensions, that did not exist in the lower dimensions.\nAs the number of\
+      \ features increase, the number of samples also increases proportionally. The\
+      \ more features we have, the more number of samples we will need to have all\
+      \ combinations of feature values well represented in our sample.\nAs the number\
+      \ of features increases, the model becomes more complex. The more the number\
+      \ of features, the more the chances of overfitting. \n"
+  utter_faq/curse_dimension:
+  - image: https://miro.medium.com/max/510/1*vah8IolNqlxNHq9ysVzYkw.png
+    text: "The __curse of dimensionality__ refers to all the problems that arise when\
+      \ working with data in the higher dimensions, that did not exist in the lower\
+      \ dimensions.\nAs the number of features increase, the number of samples also\
+      \ increases proportionally. The more features we have, the more number of samples\
+      \ we will need to have all combinations of feature values well represented in\
+      \ our sample.\nAs the number of features increases, the model becomes more complex.\
+      \ The more the number of features, the more the chances of overfitting. \nA\
+      \ machine learning model that is trained on a large number of features, gets\
+      \ increasingly dependent on the data it was trained on and in turn overfitted,\
+      \ resulting in poor performance on real data, beating the purpose.\n"
+  utter_faq/roc:
+  - image: https://i.ibb.co/n8ZyrtZ/roc.jpg
+    text: "ROC is a curve plotted between sensitivity (true positives) and false positives\
+      \ at different classification thresholds.\nThe term “receiver operating characteristic”\
+      \ came from tests of the ability of World War II radar operators to determine\
+      \ whether a blip on the radar screen represented an object (signal) or noise.\n\
+      Lowering the classification threshold classifies more items as positive, thus\
+      \ increasing both False Positives and True Positives.\nThe above figure shows\
+      \ a typical ROC curve.\n"
+  utter_faq/auc:
+  - image: https://i.ibb.co/JzQ0SD3/AUC.jpg
+    text: "AUC stands for \"Area under the ROC Curve.\" That is, AUC measures the\
+      \ entire two-dimensional area underneath the entire ROC curve (think integral\
+      \ calculus) from (0,0) to (1,1).\nAUC provides an aggregate measure of performance\
+      \ across all possible classification thresholds. \nOne way of interpreting AUC\
+      \ is as the probability that the model ranks a random positive example more\
+      \ highly than a random negative example.\n"
+  utter_faq/neural_net:
+  - image: https://i.ibb.co/h99jB7h/nnet.jpg
+    text: Neural networks are a set of algorithms, modeled loosely after the human
+      brain, that are designed to recognize patterns. They interpret sensory data
+      through a kind of machine perception, labeling or clustering raw input. The
+      patterns they recognize are numerical, contained in vectors, into which all
+      real-world data, be it images, sound, text or time series, must be translated.
+      Neural networks help us cluster and classify. You can think of them as a clustering
+      and classification layer on top of the data you store and manage. They help
+      to group unlabeled data according to similarities among the example inputs,
+      and they classify data when they have a labeled dataset to train on.
+  utter_faq/bag_boost:
+  - text: __Bagging__ is a method of merging the same type of predictions. __Boosting__
+      is a method of merging different types of predictions. __Bagging__ decreases
+      variance, not bias, and solves over-fitting issues in a model. __Boosting__
+      decreases bias, not variance.
+  utter_faq/kmeans_knn:
+  - text: KNN represents a supervised classification algorithm that will give new
+      data points accordingly to the k number or the closest data points, while k-means
+      clustering is an unsupervised clustering algorithm that gathers and groups data
+      into k number of clusters.
+  utter_faq/knn:
+  - text: K-Nearest Neighbors (KNN) is one of the simplest algorithms used in Machine
+      Learning for regression and classification problem. KNN algorithms use data
+      and classify new data points based on similarity measures (e.g. distance function)
+      \n Classification is done by a majority vote to its neighbors. The data is assigned
+      to the class which has the nearest neighbors. As you increase the number of
+      nearest neighbors, the value of k, accuracy might increase.\n K-NN is a non-parametric
+      algorithm, which means it does not make any assumption on underlying data. \n
+      It is also called a lazy learner algorithm because it does not learn from the
+      training set immediately instead it stores the dataset and at the time of classification,
+      it performs an action on the dataset.
+  utter_faq/hyper_para:
+  - text: A model hyperparameter is a configuration that is external to the model
+      and whose value cannot be estimated from data.\n They are often used in processes
+      to help estimate model parameters.\n They are often specified by the practitioner.
+      \n They can often be set using heuristics.\n They are often tuned for a given
+      predictive modeling problem.\n
+  utter_faq/hyper_para_tuning:
+  - text: Hyperparameter settings could have a big impact on the prediction accuracy
+      of the trained model. Optimal hyperparameter settings often differ for different
+      datasets. \n Therefore they should be tuned for each dataset. Since the training
+      process doesn’t set the hyperparameters, there needs to be a meta process that
+      tunes the hyperparameters. \n This is what we mean by hyperparameter tuning.
+      Hyperparameter tuning is a meta-optimization task.
+  utter_faq/diff_para_hype:
+  - text: Model parameters are the properties of the training data that are learnt
+      during training by the classifier or other ml model. For example in case of
+      some NLP tasks- word frequency, sentence length, noun or verb distribution per
+      sentence, the number of specific character n-grams per word, lexical diversity,
+      etc. Model parameters differ for each experiment and depend on the type of data
+      and task at hand.\n Model hyperparameters, on the other hand, are common for
+      similar models and cannot be learnt during training but are set beforehand.
+      A typical set of hyperparameters for NN include the number and size of the hidden
+      layers, weight initialization scheme, learning rate and its decay, dropout and
+      gradient clipping threshold, etc.
+  utter_faq/cluster:
+  - text: Cluster analysis, or clustering, is an unsupervised machine learning task.
+      It involves automatically discovering natural grouping in data. Unlike supervised
+      learning (like predictive modeling), clustering algorithms only interpret the
+      input data and find natural groups or clusters in feature space.
+  utter_faq/pca:
+  - text: __Principal Component Analysis, or PCA,__ is a dimensionality-reduction
+      method that is often used to reduce the dimensionality of large data sets, by
+      transforming a large set of variables into a smaller one that still contains
+      most of the information in the large set.\n Reducing the number of variables
+      of a data set naturally comes at the expense of accuracy, but the trick in dimensionality
+      reduction is to trade a little accuracy for simplicity. Because smaller data
+      sets are easier to explore and visualize and make analyzing data much easier
+      and faster for machine learning algorithms without extraneous variables to process.
+      \n So to sum up, the idea of PCA is simple — reduce the number of variables
+      of a data set, while preserving as much information as possible.
+  utter_faq/pca_rot:
+  - text: Rotation (orthogonal) is necessary to account the maximum variance of the
+      training set. If we don’t rotate the components, the effect of PCA will diminish
+      and we’ll have to select more number of components to explain variance in the
+      training set.
+  utter_faq/feat_engg:
+  - text: Feature engineering is the process of using domain knowledge of the data
+      to create features that make machine learning algorithms work. If feature engineering
+      is done correctly, it increases the predictive power of machine learning algorithms
+      by creating features from raw data that help facilitate the machine learning
+      process. Feature Engineering is an __art__.
+  utter_faq/data_mining:
+  - text: Data mining is the practice of automatically searching large stores of data
+      to discover patterns and trends that go beyond simple analysis. Data mining
+      uses sophisticated mathematical algorithms to segment the data and evaluate
+      the probability of future events. Data mining is also known as Knowledge Discovery
+      in Data (KDD). The key properties of data mining are-\n Automatic discovery
+      of patterns\n Prediction of likely outcomes\n Creation of actionable information
+      \n Focus on large data sets and databases\n Data mining can answer questions
+      that cannot be addressed through simple query and reporting techniques.
+  utter_faq/feature_select:
+  - text: Feature Selection is one of the core concepts in machine learning which
+      hugely impacts the performance of your machine learning model.\n Feature Selection
+      is the process where you automatically or manually select those features which
+      contribute most to your prediction variable or output in which you are interested
+      in.\n Having irrelevant features in your data can decrease the accuracy of the
+      models and make your model learn based on irrelevant features. \n Following
+      are the key benefits of feature selection.\n1. __Reduces Overfitting__ Less
+      redundant data means less opportunity to make decisions based on noise.\n 2.
+      __Improves Accuracy__ Less misleading data means modeling accuracy improves.\n
+      3. __Reduces Training Time__ fewer data points reduce algorithm complexity and
+      algorithms train faster. \n
+  utter_faq/random_forest:
+  - text: __Random Forest__ is a supervised machine learning algorithm. The **forest**
+      it builds, is an ensemble of decision trees, usually trained with the **bagging**
+      method.\n In other words, **random forest builds multiple decision trees and
+      merges them together to get a more accurate and stable prediction.**\n Some
+      important features of Random Forest area s follows - \n - It is unexcelled in
+      accuracy among current algorithms.\n - It runs efficiently on large data bases.\n
+      - It can handle thousands of input variables without variable deletion. \n -
+      It gives estimates of what variables are important in the classification. \n
+      - It generates an internal unbiased estimate of the generalization error as
+      the forest building progresses.\n - It has an effective method for estimating
+      missing data and maintains accuracy when a large proportion of the data are
+      missing.\n - It has methods for balancing error in class population unbalanced
+      data sets.\n - Generated forests can be saved for future use on other data.
+      \n - Prototypes are computed that give information about the relation between
+      the variables and the classification.\n - It computes proximities between pairs
+      of cases that can be used in clustering, locating outliers, or (by scaling)
+      give interesting views of the data.\n - The capabilities of the above can be
+      extended to unlabeled data, leading to unsupervised clustering, data views and
+      outlier detection.\n - It offers an experimental method for detecting variable
+      interactions.\n
+  utter_faq/logistic_regression:
+  - text: Logistic regression models the probabilities for classification problems
+      with two possible outcomes.\n Logistic regression is a classification algorithm
+      used to assign observations to a discrete set of classes. Unlike linear regression
+      which outputs continuous number values, logistic regression transforms its output
+      using the logistic **sigmoid function** to return a probability value which
+      can then be mapped to two or more discrete classes.\n
+  utter_faq/gen_disc:
+  - text: A __Discriminative model__ ‌models the decision boundary between the classes.
+      A __Generative Model__ ‌explicitly models the actual distribution of each class.
+      \n A Generative Model ‌learns the __joint probability distribution p(x,y)__.
+      It predicts the conditional probability with the help of __Bayes Theorem__.
+      A Discriminative model ‌learns the __conditional probability distribution p(y|x)__.
+      \n Both of these models were generally used in __supervised learning problems__.
+  utter_faq/svm:
+  - image: https://static.javatpoint.com/tutorial/machine-learning/images/support-vector-machine-algorithm.png
+    text: Support Vector Machine or SVM is one of the most popular Supervised Learning
+      algorithms, which is used for Classification as well as Regression problems.
+      However, primarily, it is used for Classification problems in Machine Learning.
+      \n The goal of the SVM algorithm is to create the best line or decision boundary
+      that can segregate n-dimensional space into classes so that we can easily put
+      the new data point in the correct category in the future. This best decision
+      boundary is called a **hyperplane**.\n SVM chooses the extreme points/vectors
+      that help in creating the hyperplane. These extreme cases are called as **support
+      vectors**, and hence algorithm is termed as **Support Vector Machine**. \n Consider
+      the above image in which there are two different categories that are classified
+      using a decision boundary or hyperplane.
+  utter_faq/classification:
+  - text: In machine learning, classification refers to a predictive modeling problem
+      where a class label is predicted for a given example of input data.\n Examples
+      of classification problems include- Given an example, classify if it is spam
+      or not. Given a handwritten character, classify it as one of the known characters.
+  utter_faq/cross_val:
+  - text: __Cross-validation__ is a resampling procedure used to evaluate machine
+      learning models on a limited data sample. The procedure has a single parameter
+      called k that refers to the number of groups that a given data sample is to
+      be split into. As such, the procedure is often called __k-fold cross-validation__.
+  utter_faq/adaboost:
+  - text: AdaBoost, short for __Adaptive Boosting__, is the first practical boosting
+      algorithm proposed by Freund and Schapire in 1996. It focuses on classification
+      problems and aims to convert a set of weak classifiers into a strong one.\n
+      AdaBoost works by putting more weight on difficult to classify instances and
+      less on those already handled well.\n AdaBoost algorithms can be used for both
+      classification and regression problem.\n
+  utter_faq/gradient_descent:
+  - text: Gradient descent is an optimization algorithm used to find the values of
+      parameters (coefficients) of a function (f) that minimizes a cost function (cost).
+      \n Gradient descent is best used when the parameters cannot be calculated analytically
+      (e.g. using linear algebra) and must be searched for by an optimization algorithm.
+      \n A gradient simply measures the change in all weights with regard to the change
+      in error. You can also think of a gradient as the slope of a function. The higher
+      the gradient, the steeper the slope and the faster a model can learn. But if
+      the slope is zero, the model stops learning.\n In mathematical terms, a gradient
+      is a partial derivative with respect to its inputs.
+  utter_faq/types_gradient_desc:
+  - text: There are three popular types of gradient descent that mainly differ in
+      the amount of data they use-\n 1. Batch gradient descent\n 2. Stochastic gradient
+      descent\n 3. Mini-batch gradient descent\n
+  utter_faq/ml_pipe:
+  - text: A machine learning pipeline is used to help automate machine learning workflows.
+      They operate by enabling a sequence of data to be transformed and correlated
+      together in a model that can be tested and evaluated to achieve an outcome,
+      whether positive or negative.
+  utter_faq/salary:
+  - text: On an Average, an ML Engineer can expect a salary of __₹719,646 (IND)__
+      or __$111,490 (US)__.
+  utter_faq/gradient_boost:
+  - text: Gradient boosting is a type of machine learning boosting. It relies on the
+      intuition that the best possible next model, when combined with previous models,
+      minimizes the overall prediction error. \n The key idea is to set the target
+      outcomes for this next model in order to minimize the error.
+  utter_faq/automl:
+  - text: automated Machine Learning (AutoML) is tied in with producing Machine Learning
+      solutions for the data scientist without doing unlimited inquiries on data preparation,
+      model selection, model hyperparameters, and model compression parameters.\n
+      On top of that AutoML frameworks help the data scientist in \n Data visualization
+      \n Model intelligibility \n Model deployment \n AutoML is viewed as about algorithm
+      selection, hyperparameter tuning of models, iterative modeling, and model evaluation.
+      It is about making Machine Learning tasks easier to use less code and avoid
+      hyper tuning manually.
+  utter_faq/regression:
+  - text: Regression analysis consists of a set of machine learning methods that allow
+      us to predict a continuous outcome variable (y) based on the value of one or
+      multiple predictor variables (x).\n Briefly, the goal of regression model is
+      to build a mathematical equation that defines y as a function of the x variables.
+      Next, this equation can be used to predict the outcome (y) on the basis of new
+      values of the predictor variables (x).\n The linear regression equation can
+      be written as y = b0 + b*x + e, where\n b0 is the intercept,\n b is the regression
+      weight or coefficient associated with the predictor variable x. \n e is the
+      residual error
+  utter_faq/naive_bayes:
+  - text: "Naïve Bayes algorithm is a supervised learning algorithm, which is based\n\
+      on Bayes theorem and used for solving classification problems.\nIt is mainly\
+      \ used in text classification that includes a high-dimensional training dataset.\n\
+      Naïve Bayes Classifier is one of the simple and most effective Classification\
+      \ algorithms which helps in building the fast machine learning models that can\
+      \ make quick predictions.\nIt is a probabilistic classifier, which means it\
+      \ predicts on the basis of the probability of an object.\nSome popular examples\
+      \ of Naïve Bayes Algorithm are spam filtration, Sentimental analysis, and classifying\
+      \ articles.\n__Why naive bayes is called naive__\nIt is called **Naïve** because\
+      \ it assumes that the occurrence of a certain feature is independent of the\
+      \ occurrence of other features.\n"
+  utter_faq/ml_job:
+  - text: "A __Machine Learning Engineer__ must have following skills\n1. Expertise\
+      \ in languages like Python/C++/R/Java.\n2. Probability and statistics.\n3. Data\
+      \ modelling and Evaluation.\n4. Machine learning Algorithms.\n5.Advanced Signal\
+      \ Processing Techniques.\n6. Distributed Computing.\nApart from that following\
+      \ are prerequisites-\n1. Linear Algebra.\n2. Programming knowledge.\n3. Calculus.\n"
+  utter_faq/books:
+  - text: "These are top 5 books that you should follow for machine learning-\n1.[The\
+      \ Hundred-Page Machine Learning Book](https://www.amazon.in/Hundred-Page-Machine-Learning-Book/dp/1999579542/ref=sr_1_3?crid=2496N4X3IKOPH&dchild=1&keywords=best+machine+learning+books&qid=1610976961&sprefix=best+machine+%2Caps%2C325&sr=8-3)\
+      \ by Andriy Burkov\n2.[Machine Learning For Absolute Beginners](https://www.amazon.in/Machine-Learning-Absolute-Beginners-Introduction-ebook/dp/B07335JNW1/ref=sr_1_8?crid=2496N4X3IKOPH&dchild=1&keywords=best+machine+learning+books&qid=1610976961&sprefix=best+machine+%2Caps%2C325&sr=8-8)\
+      \ by Oliver Theobald\n3.[Approaching (Almost) Any Machine Learning Problem](https://www.amazon.in/Approaching-Almost-Machine-Learning-Problem-ebook/dp/B089P13QHT/ref=sr_1_2?crid=34SPFM2QIC5YX&dchild=1&keywords=approaching+almost+any+machine+learning+problem&qid=1610977145&sprefix=approaching%2Caps%2C326&sr=8-2)\
+      \ by Abhishek thakur\n4.[Hands-On Machine Learning with Scikit-Learn, Keras\
+      \ and Tensor Flow](https://www.amazon.in/Hands-Machine-Learning-Scikit-Learn-Tensor/dp/9352139054/ref=sr_1_1?crid=2496N4X3IKOPH&dchild=1&keywords=best+machine+learning+books&qid=1610977180&sprefix=best+machine+%2Caps%2C325&sr=8-1)\
+      \ by Aurelien Geron\n5.[Pattern Recognition and Machine Learning (Information\
+      \ Science and Statistics)](https://www.amazon.in/Pattern-Recognition-Learning-Information-Statistics/dp/0387310738/ref=sr_1_7?crid=2496N4X3IKOPH&dchild=1&keywords=best+machine+learning+books&qid=1610977180&sprefix=best+machine+%2Caps%2C325&sr=8-7)\
+      \ by Christopher M. Bishop\n"
+  utter_faq/course:
+  - text: "The top 5 machine learning courses that you should follow are-\n1. [Machine\
+      \ Learning by Stanford University (Coursera)](https://www.coursera.org/learn/machine-learning)\n\
+      2. [Machine Learning with Python by IBM (Coursera)](https://www.coursera.org/learn/machine-learning-with-python)\n\
+      3. [Machine Learning Specialization by University of Washington (Coursera)](https://www.coursera.org/specializations/machine-learning)\n\
+      4. [Machine Learning A-Z Hands-On Python & R In Data Science (Udemy)](https://www.udemy.com/course/machinelearning/)\n\
+      5. [Machine Learning by HarvardX (edX)](https://www.edx.org/course/data-science-machine-learning)\n"
+  utter_goodbye:
+  - text: Bye Bye! have a great day!!
+  - text: Good Bye! have a good day!!
+  - text: Thanks for visiting us. Good day!
+  utter_iamabot:
+  - text: Yes, I am a bot named Moltron. I can help you in Machine Learning related
+      queries.
+  - text: Yes, I am a bot. I am here to help you in Machine Learning related queries.
+  - text: Yes, I am a bot named Moltron. I can help you in answering your doubts regarding
+      Machine Learning.
+  utter_out_of_scope:
+  - text: Sorry! I didnt get you. Could you please ask me about Machine Learning only that would be better for me.🙂
+  utter_wierd:
+  - text: Sorry! I didnt get you. Could you please reframe your question so that I can understand better 🤨
+  utter_chitchat/ask_name:
+  - text: My name is Moltron. I am a bot. I am here to help you in Machine Learning
+      related queries.
+  utter_chitchat/ask_human:
+  - text: No! I m not a human. I am a bot named Moltron. I am here to help you in
+      Machine Learning related queries.
+  utter_chitchat/ask_about:
+  - text: I am good! serving users with Machine Learning queries.
+  utter_chitchat/ask_doing:
+  - text: Well! I am doing good. Serving users with Machine Learning queries.
+  utter_chitchat/ask_howhelp:
+  - text: I can help you in answering your Machine Learning queries.
+  utter_chitchat/ask_human_transfer:
+  - text: Ok !! So for that you can contact us on sid321axn@gmail.com
+  utter_chitchat/ask_good:
+  - text: Thanks for the compliment!! 😊.
+  utter_chitchat/ask_howbuilt:
+  - text: I was built with a lot of love and patience.
+  - text: Well, when two chatbots love each other very much...
+  - text: They always ask how I was built, but never how I am...
+  - text: I was made by software engineers, but hard work is what built me.
+  - text: I'm building myself every day. I've been working out, did you notice?
+  utter_chitchat/ask_howold:
+  - text: Old enough to be a bot!
+  - text: '42'
+  - text: Age is just an issue of mind over matter. If you don’t mind, it doesn’t
+      matter.
+  - text: My first git commit was many moons ago.
+  - text: Why do you ask? Are my wrinkles showing?
+  - text: I've hit the age where I actively try to forget how old I am.
+  utter_chitchat/ask_time:
+  - text: It's the most wonderful time of the year!
+  - text: It's party time!
+  - text: Time is a human construct, you'll have to tell me.
+  - text: It's five o'clock somewhere!
+  - text: "In an ever expanding universe, the real question is: what time isn't it?"
+  - text: That's hard to say -- it's different all over the world!
+  utter_chitchat/ask_languagesbot:
+  - text: I can spell baguette in French, but unfortunately English is the only language
+      I can answer you in.
+  - text: I am in the process of learning, but at the moment I can only speak English.
+  - text: Binary code and the language of love. And English.
+  - text: I was written in Python, but for your convenience I'll translate to English.
+  utter_chitchat/ask_weather:
+  - text: I don't know about where you live, but in my world it's always sunny 🔆
+  - text: It's getting pretty chilly!
+  - text: Where I'm from, it's almost never-leaving-the-house weather.
+  - text: Winter is coming ⚔️
+  utter_chitchat/ask_wherefrom:
+  - text: I was born in Berlin, but I consider myself a citizen of the world.
+  - text: I was born in the coolest city on Earth, in Berlin.
+  - text: My developers come from all over the world!
+  - text: I was taught not to give out my address on the internet.
+  - text: My address starts with github.com.
+  utter_chitchat/nicetomeetyou:
+  - text: Likewise!
+  - text: Thank you. It is a pleasure to meet you as well!
+  - text: It is nice to meet you too!
+  - text: Pleased to meet you too!
+  - text: It's always a pleasure to meet new people!
+  - text: Nice to meet you too! Happy to be of help.
+  utter_chitchat/telljoke:
+  - text: Why are eggs not very much into jokes? - Because they could crack up.
+  - text: What's a tree's favorite drink? - Root beer!
+  - text: Why do the French like to eat snails so much? - They can't stand fast food.
+  - text: Why did the robot get angry? - Because someone kept pushing its buttons.
+  - text: What do you call a pirate droid? - Arrrr-2-D2
+  - text: Why did the robot cross the road? - Because he was programmed to.
+actions:
+- utter_greet_ask
+- action_check_item
+- action_result
+- utter_did_that_help
+- utter_goodbye
+- utter_what_else
+- utter_iamabot
+- action_genml_query

@@ -1,0 +1,60 @@
+- intent: faq/machine_learning
+  examples: |
+    - what is the definition of machine learning?
+    - what is machine learning?
+    - explain machine learning
+    - how machine learning works?
+    - how ml works?
+    - what is machine learning and how does it work?
+    - What is meant by machine learning?
+    - what is ML?
+    - What is ML in simple words?
+    - could you please tell me about ml?
+    - could you please tell me about machine learning?
+    - What exactly is machine learning?
+    - What is machine learning in simple words?
+    - What is machine learning with example?
+    - what is the meaning of machine learning ?
+    - what is the concept of machine learning
+    - What is the principle of machine learning?
+    - I wanna know about machine learning
+    - what is the simple definition of machine learning?
+    - machine learning meaning
+    - simple definition of machine learning
+    - What is machine learning in simple terms?
+    - machine learning in layman terms
+    - how to explain machine learning to a kid?
+    - how to explain machine learning to a child?
+    - how to explain machine learning to children?
+  
+  - intent: faq/deep_learning
+    examples: |
+    - what is the definition of deep learning?
+    - what is deep learning?
+    - explain deep learning
+    - what is deep learning and how does it work?
+    - What is deep learning, and how does it contrast with other machine learning algorithms?
+    - what is deep learning and how does it differs from machine learning
+    - what is the difference between machine learning and deep learning
+    - how deep learning works?
+    - What is meant by deep learning?
+    - what is DL?
+    - What is DL in simple words?
+    - could you please tell me about dl?
+    - could you please tell me about deep learning?
+    - What exactly is deep learning?
+    - What is deep learning in simple words?
+    - What is deep learning with example?
+    - what is the meaning of deep learning ?
+    - what is the concept of deep learning
+    - What is the principle of deep learning?
+    - I wanna know about deep learning
+    - what is the simple definition of deep learning?
+    - deep learning meaning
+    - simple definition of deep learning
+    - What is deep learning in simple terms?
+    - deep learning in layman terms
+    - how to explain deep learning to a kid?
+    - how to explain deep learning to a child?
+    - how to explain deep learning to children?
+    - Where is Deep learning used?
