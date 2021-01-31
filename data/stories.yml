@@ -8,7 +8,7 @@ stories:
   - action: utter_greet_ask
   - intent: ask_query 
     entities:
-    - item: "Machine Learning Books"
+    - item: "ML Books"
   - slot_was_set:
     - item: "book"
   - action: action_result
@@ -22,7 +22,7 @@ stories:
   - action: utter_greet_ask
   - intent: ask_query 
     entities:
-    - item: "Machine Learning Courses"
+    - item: "ML Courses"
   - slot_was_set:
     - item: "course"
   - action: action_result
@@ -36,7 +36,7 @@ stories:
   - action: utter_greet_ask
   - intent: ask_query 
     entities:
-    - item: "Machine Learning Skills"
+    - item: "ML Skills"
   - slot_was_set:
     - item: "skill"
   - action: action_result
@@ -50,7 +50,7 @@ stories:
   - action: utter_greet_ask
   - intent: ask_query 
     entities:
-    - item: "Machine Learning Courses"
+    - item: "ML Courses"
   - slot_was_set:
     - item: "course"
   - action: action_result
@@ -59,7 +59,7 @@ stories:
   - action: utter_what_else
   - intent: ask_query 
     entities:
-    - item: "Machine Learning Skills"
+    - item: "ML Skills"
   - slot_was_set:
     - item: "skill"
   - action: action_result
@@ -73,7 +73,7 @@ stories:
   - action: utter_greet_ask
   - intent: ask_query 
     entities:
-    - item: "Machine Learning Courses"
+    - item: "ML Courses"
   - slot_was_set:
     - item: "course"
   - action: action_result
@@ -109,11 +109,61 @@ stories:
   - intent: deny
   - action: utter_goodbye
 
+- story: happy path89
+  steps:
+  - intent: nlp 
+  - action: action_genml_query
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: happy path82
+  steps:
+  - intent: cnn 
+  - action: action_genml_query
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: happy path823
+  steps:
+  - intent: computer_vision 
+  - action: action_genml_query
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: happy path8234
+  steps:
+  - intent: artificial_intelligence 
+  - action: action_genml_query
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+- story: happy path82345
+  steps:
+  - intent: reinforce 
+  - action: action_genml_query
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
 - story: happy path9
   steps:
   - intent: greet
   - action: utter_greet_ask
   - intent: ml_query 
+  - action: action_genml_query
+  - action: utter_did_that_help
+  - intent: thank 
+  - action: utter_welcome
+
+- story: happy path9
+  steps:
+  - intent: greet
+  - action: utter_greet_ask
+  - intent: reinforce 
   - action: action_genml_query
   - action: utter_did_that_help
   - intent: thank 

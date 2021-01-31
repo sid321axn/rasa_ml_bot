@@ -254,132 +254,6 @@ nlu:
     - #
     - jhsb wd bwhjdbx asbhb
 
-- intent: faq/artificial_intelligence
-  examples: |
-    - what is artificial intelligence?
-    - what is AI?
-    - explain artificial intelligence
-    - how artificial intelligence works?
-    - how AI works?
-    - What is Artificial Intelligence exactly?
-    - What is meant by Artificial Intelligence?
-    - What is AI in simple words?
-    - What is AI with examples?
-    - could you please tell me about AI?
-    - could you please tell me about Artificial Intelligence?
-    - What exactly is Artificial Intelligence?
-    - What is Artificial Intelligence in simple words?
-    - What is artificial intelligence with example?
-    - what is the meaning of Artificial Intelligence ?
-    - what is the concept of Artificial Intelligence
-    - What is the principle of Artificial Intelligence?
-    - I wanna know about Artificial Intelligence
-    - what is the simple definition of Artificial Intelligence?
-    - Artificial Intelligence meaning
-    - simple definition of Artificial Intelligence
-    - What is Artificial Intelligence in simple terms?
-    - Artificial Intelligence in layman terms
-    - how to explain Artificial Intelligence to a kid?
-    - how to explain Artificial Intelligence to a child?
-    - how to explain Artificial Intelligence to children?
-    - Where is AI used?
-    - How AI will help humans?
-    - How AI affect our life?
-    - What are the main goals of AI?
-- intent: faq/rl
-  examples: |
-    - what is reinforcement learning?
-    - explain reinforcement learning
-    - how can you define reinforcement learning?
-    - how reinforcement learning works? 
-    - definition of reinforcement learning
-    - define reinforcement learning
-    - definition of reinforcement learning
-    - what do you mean by reinforcement learning?
-    - what is reinforcement learning exactly?
-    - what is meant by reinforcement learning?
-    - what is reinforcement learning in simple words?
-    - how can you explain reinforcement learning to a school going kid?
-    - could you please tell me about  reinforcement learning?
-    - What exactly is reinforcement learning?
-    - What is reinforcement learning in simple words?
-    - What is reinforcement learning with example?
-    - what is the meaning of reinforcement learning?
-    - what is the concept of reinforcement learning
-    - What is the principle of reinforcement learning?
-    - I wanna know about reinforcement learning
-    - what is the simple definition of reinforcement learning?
-    - reinforcement learning meaning
-    - simple definition of reinforcement learning
-    - What is reinforcement learning in simple terms?
-    - reinforcement learning in layman terms
-    - how to explain reinforcement learning to a kid?
-    - how to explain reinforcement learning to a child?
-    - how to explain reinforcement learning to children?
-    - How reinforcement learning will help humans?
-    - How reinforcement learning affect our life?
-    - What are the main goals of reinforcement learning?
-
-- intent: faq/nlp
-  examples: |
-    - what is natural language processing?
-    - what is NLP?
-    - explain natural language processing
-    - explain nlp
-    - how natural language processing works?
-    - how NLP works?
-    - What do you mean by natural language processing?
-    - What is natural language processing exactly?
-    - What is meant by natural language processing?
-    - What is natural language processing in simple words?
-    - what is nlp in simple words
-    - What is natural language processing with examples?
-    - could you please tell me about natural language processing?
-    - could you please tell me about nlp?
-    - What exactly is natural language processing?
-    - What is natural language processing with example?
-    - what is the meaning of natural language processing ?
-    - what is the concept of natural language processing
-    - What is the principle of natural language processing?
-    - I wanna know about Artificial Intelligence
-    - what is the simple definition of natural language processing?
-    - natural language processing meaning
-    - simple definition of natural language processing
-    - What is natural language processing in simple terms?
-    - natural language processing in layman terms
-    - Where is NLP used?
-    - what is natural language processing in ai
-    - natural language processing in artificial intelligence
-
-- intent: faq/rl
-  examples: |
-    - what is reinforcement learning?
-    - What is reinforcement learning theory?
-    - explain reinforcement learning
-    - how reinforcement learning works?
-    - What is reinforcement learning example?
-    - What is a reinforcement learning algorithm?
-    - What is reinforcement learning in machine learning?
-    - What is meant by reinforcement learning?
-    - What is reinforcement learning in simple words?
-    - what is reinforcement learning in simple words
-    - What is reinforcement learning with examples?
-    - could you please tell me about reinforcement learning?
-    - What exactly is reinforcement learning?
-    - What is reinforcement learning with example?
-    - what is the meaning of reinforcement learning ?
-    - what is the concept of reinforcement learning
-    - What is the principle of reinforcement learning?
-    - I wanna know about reinforcement learning
-    - what is the simple definition of reinforcement learning?
-    - reinforcement learning meaning
-    - simple definition of reinforcement learning
-    - What is reinforcement learning in simple terms?
-    - reinforcement learning in layman terms
-    - Where is reinforcement learning used?
-    - what is reinforcement learning in ai
-    - reinforcement learning in artificial intelligence
-
 - intent: chitchat/nicetomeetyou
   examples: |
     - Its really nice to meet you
@@ -1725,9 +1599,10 @@ nlu:
 - intent: ask_query
   examples: |
     - i'm looking for important [books](item:book) in machine learning 
-    - [Machine Learning Books](item:book)
+    - [ML Books](item:book)
+    - [ML Courses](item:course)
     - [Machine Learning Courses](item:course)
-    - [Machine Learning Skills](item:skill)
+    - [ML Skills](item:skill)
 - intent: dl_query
   examples: |
     - what is deep learning?
@@ -1804,6 +1679,147 @@ nlu:
     - How machine learning will help humans?
     - How machine learning affect our life?
     - What are the main goals of machine learning?
+
+- intent: nlp
+  examples: |
+    - what is natural language processing?
+    - what is NLP?
+    - explain natural language processing
+    - explain nlp
+    - how natural language processing works?
+    - how NLP works?
+    - What do you mean by natural language processing?
+    - What is natural language processing exactly?
+    - What is meant by natural language processing?
+    - What is natural language processing in simple words?
+    - what is nlp in simple words
+    - What is natural language processing with examples?
+    - could you please tell me about natural language processing?
+    - could you please tell me about nlp?
+    - What exactly is natural language processing?
+    - What is natural language processing with example?
+    - what is the meaning of natural language processing ?
+    - what is the concept of natural language processing
+    - What is the principle of natural language processing?
+    - I wanna know about Artificial Intelligence
+    - what is the simple definition of natural language processing?
+    - natural language processing meaning
+    - simple definition of natural language processing
+    - What is natural language processing in simple terms?
+    - natural language processing in layman terms
+    - Where is NLP used?
+    - what is natural language processing in ai
+    - natural language processing in artificial intelligence
+- intent: reinforce
+  examples: |
+    - what is reinforcement learning?
+    - explain reinforcement learning
+    - how can you define reinforcement learning?
+    - how reinforcement learning works? 
+    - definition of reinforcement learning
+    - define reinforcement learning
+    - definition of reinforcement learning
+    - what do you mean by reinforcement learning?
+    - what is reinforcement learning exactly?
+    - what is meant by reinforcement learning?
+    - what is reinforcement learning in simple words?
+    - how can you explain reinforcement learning to a school going kid?
+    - could you please tell me about  reinforcement learning?
+    - What exactly is reinforcement learning?
+    - What is reinforcement learning in simple words?
+    - What is reinforcement learning with example?
+    - what is the meaning of reinforcement learning?
+    - what is the concept of reinforcement learning
+    - What is the principle of reinforcement learning?
+    - I wanna know about reinforcement learning
+    - what is the simple definition of reinforcement learning?
+    - reinforcement learning meaning
+    - simple definition of reinforcement learning
+    - What is reinforcement learning in simple terms?
+    - reinforcement learning in layman terms
+    - how to explain reinforcement learning to a kid?
+    - how to explain reinforcement learning to a child?
+    - how to explain reinforcement learning to children?
+    - How reinforcement learning will help humans?
+    - How reinforcement learning affect our life?
+    - What are the main goals of reinforcement learning?
+- intent: computer_vision
+  examples: |
+    - what is computer vision?
+    - explain computer vision
+    - how can you define computer vision?
+    - how computer vision works? 
+    - definition of computer vision
+    - define computer vision
+    - what do you mean by computer vision?
+    - what is computer vision exactly?
+    - what is meant by computer vision?
+    - what is computer vision in simple words?
+    - how can you explain computer vision to a school going kid?
+    - could you please tell me about  computer vision?
+    - What exactly is computer vision
+    - What is computer vision with example?
+    - computer vision
+
+- intent: cnn
+  examples: |
+    - what is convolutional neural network?
+    - what is cnn?
+    - explain convolutional neural network
+    - explain cnn
+    - How would you describe CNN?
+    - how can you define CNN?
+    - What is convolutional neural network in image processing?
+    - how convolutional neural network works? 
+    - how cnn works? 
+    - definition of convolutional neural network
+    - definition of CNN
+    - define CNN
+    - what do you mean by convolutional neural network?
+    - what do you mean by CNN?
+    - what is CNN exactly?
+    - what is meant by CNN?
+    - What is CNN in simple words??
+    - How does CNN work?
+    - Is CNN an algorithm?
+    - What exactly is cnn
+    - What is cnn with example?
+    - cnn
+    - convolutional neural network
+
+- intent: artificial_intelligence
+  examples: |
+    - what is artificial intelligence?
+    - what is AI?
+    - explain artificial intelligence
+    - how artificial intelligence works?
+    - how AI works?
+    - What is Artificial Intelligence exactly?
+    - What is meant by Artificial Intelligence?
+    - What is AI in simple words?
+    - What is AI with examples?
+    - could you please tell me about AI?
+    - could you please tell me about Artificial Intelligence?
+    - What exactly is Artificial Intelligence?
+    - What is Artificial Intelligence in simple words?
+    - What is artificial intelligence with example?
+    - what is the meaning of Artificial Intelligence ?
+    - what is the concept of Artificial Intelligence
+    - What is the principle of Artificial Intelligence?
+    - I wanna know about Artificial Intelligence
+    - what is the simple definition of Artificial Intelligence?
+    - Artificial Intelligence meaning
+    - simple definition of Artificial Intelligence
+    - What is Artificial Intelligence in simple terms?
+    - Artificial Intelligence in layman terms
+    - how to explain Artificial Intelligence to a kid?
+    - how to explain Artificial Intelligence to a child?
+    - how to explain Artificial Intelligence to children?
+    - Where is AI used?
+    - How AI will help humans?
+    - How AI affect our life?
+    - What are the main goals of AI?
+
 - intent: faq/books
   examples: |
     - what are the best books for machine learning
@@ -1813,6 +1829,34 @@ nlu:
     - Which book is best for machine learning?
     - What are the best books to self-learn machine learning fundamentals?
     - please suggest some good books in machine learning
+- intent: faq/nlu
+  examples: |
+    - what is natural language understanding
+    - what is nlu
+    - How does natural language understanding work?
+    - What are the steps in natural language understanding?
+    - What do you understand by natural language?
+    - How does natural language understanding NLU work in AI?
+    - Why natural language understanding is difficult?
+    - natural language understanding
+    - nlu
+    - define nlu
+    - define natural language understanding
+    - definition of natural language understanding
+- intent: faq/tokenization
+  examples: |
+    - what is tokenization
+    - What is tokenization and how does it work?
+    - How does tokenization work?
+    - What does tokenization mean?
+    - What is the purpose of tokenization?
+    - What is tokenization in machine learning?
+    - What is tokenization in nlp?
+    - What is tokenization explain with an example?
+    - How do you use tokenization?
+    - tokenization
+    - define tokenization
+    - definition of tokenization
 - intent: faq/course
   examples: |
     - what are top courses in machine learning
