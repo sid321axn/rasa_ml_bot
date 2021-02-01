@@ -129,7 +129,7 @@ Python virtual environments are used to isolate package installation from the sy
 
 > [http://localhost:5055/](http://localhost:5055/)
 
-### Run Nora bot ui
+### Run Moltron bot ui
 
 `npm run start`
 
